@@ -1,0 +1,10 @@
+{
+ "files": [],
+ "scenes": [
+  "Login",
+  "Default",
+  "Splash"
+ ],
+ "theme": "base",
+ "modules": ["ime"]
+}

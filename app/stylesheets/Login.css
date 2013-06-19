@@ -1,0 +1,21 @@
+#SceneLogin {
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 1280px;
+	height : 720px;
+	background-color : #ffffff;
+	background-image : url('');
+}
+#SceneLogin #password{
+	position : absolute;
+	left : 170px;
+	top : 230px;
+	width : 173px;
+}
+#SceneLogin #user{
+	position : absolute;
+	left : 170px;
+	top : 150px;
+	width : 173px;
+}

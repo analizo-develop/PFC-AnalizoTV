@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>AnalizoTV</title>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/af/2.0.0/loader.js"></script>
+		<script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/webapi/1.0/webapis.js'></script>
+		
+        <script src="app/scenes/usergrid.js"></script>
+        <script src="app/scenes/usergrid.validation.js"></script>
+	</head>
+	<body>
+	<script type="text/javascript">
+		var client = new Usergrid.Client({
+    		orgName:'johanderohan', //your orgname goes here (not case sensitive)
+    		appName:'sandbox', //your appname goes here (not case sensitive)
+    		logging: true, //optional - turn on logging, off by default
+    		buildCurl: true //optional - turn on curl commands, off by default
+  		});
+		
+		var username = '';
+		var password = '';
+	</script>
+	</body>
+</html>

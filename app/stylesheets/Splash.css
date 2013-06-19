@@ -1,0 +1,16 @@
+#SceneSplash {
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 1280px;
+	height : 720px;
+	background-color : #ffffff;
+	background-image : url('');
+}
+#SceneSplash #loading{
+	position : absolute;
+	left : 380px;
+	top : 190px;
+	width : 156px;
+	height : 119px;
+}
