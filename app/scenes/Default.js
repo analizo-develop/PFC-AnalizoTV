@@ -1,6 +1,6 @@
 alert('SceneDefault.js loaded');
 
-var slected_proyect = 0;
+var selected_proyect = -1;
 
 function SceneDefault() {
 
@@ -62,8 +62,18 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 	alert("SceneDefault.handleKeyDown(" + keyCode + ")");
 	// TODO : write an key event handler when this scene get focued
 	var proyect_load;
+	
 	var KEY_1 = 101;
 	var KEY_2 = 98;
+	var KEY_3 = 6;
+	var KEY_4 = 8;
+	var KEY_5 = 9;
+	var KEY_6 = 10;
+	var KEY_7 = 12;
+	var KEY_8 = 13;
+	var KEY_9 = 14;
+	var KEY_0 = 17;
+	
 	var RED = 108;
 	var GREEN = 20;
 	var YELLOW = 21;
@@ -81,50 +91,128 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 		case sf.key.ENTER:
 			break;
 		case KEY_1:
+			if (selected_proyect == -1){
 			selected_proyect = 1;
 			proyect_load = {
 			    type:'proyects',
 			    name:'1'
 			};
 			
-			client.getEntity(proyect_load, function (err, proyect) {
-			    if (err){
-
-			    } else {
-			    	$("#categorias").empty();
-			    	$("#categorias").append("<li> Pulsa Rojo para: " +proyect.get('cat1') + "</li>");
-			    	$("#categorias").append("<li> Pulsa Verde para: " +proyect.get('cat2') + "</li>");
-			    	$("#categorias").append("<li> Pulsa Amarillo para: " +proyect.get('cat3') + "</li>");
-			    	$("#categorias").append("<li> Pulsa Azul para: " +proyect.get('cat4') + "</li>");
-			        $("#lista").hide();
-			    	$("#categorias").show();
-			    }
-			});
+			loadCategories(proyect_load);
+			}
 			break;
 			
 		case KEY_2:
+			if (selected_proyect == -1){
 			selected_proyect = 2;
 			proyect_load = {
 			    type:'proyects',
 			    name:'2'
 			};
 			
-			client.getEntity(proyect_load, function (err, proyect) {
-			    if (err){
-
-			    } else {
-			    	$("#categorias").empty();
-			    	$("#categorias").append("<li> Pulsa Rojo para: " +proyect.get('cat1') + "</li>");
-			    	$("#categorias").append("<li> Pulsa Verde para: " +proyect.get('cat2') + "</li>");
-			    	$("#categorias").append("<li> Pulsa Amarillo para: " +proyect.get('cat3') + "</li>");
-			    	$("#categorias").append("<li> Pulsa Azul para: " +proyect.get('cat4') + "</li>");
-			        $("#lista").hide();
-			    	$("#categorias").show();
-			    }
-			});
+			loadCategories(proyect_load);
+			}
 			break;
 			
+		case KEY_3:
+			if (selected_proyect == -1){
+			selected_proyect = 3;
+			proyect_load = {
+			    type:'proyects',
+			    name:'3'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+		case KEY_4:
+			if (selected_proyect == -1){
+			selected_proyect = 4;
+			proyect_load = {
+			    type:'proyects',
+			    name:'4'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+		case KEY_5:
+			if (selected_proyect == -1){
+			selected_proyect = 5;
+			proyect_load = {
+			    type:'proyects',
+			    name:'5'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+		case KEY_6:
+			if (selected_proyect == -1){
+			selected_proyect = 6;
+			proyect_load = {
+			    type:'proyects',
+			    name:'6'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+		case KEY_7:
+			if (selected_proyect == -1){
+			selected_proyect = 7;
+			proyect_load = {
+			    type:'proyects',
+			    name:'7'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+		case KEY_8:
+			if (selected_proyect == -1){
+			selected_proyect = 8;
+			proyect_load = {
+			    type:'proyects',
+			    name:'8'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+		case KEY_9:
+			if (selected_proyect == -1){
+			selected_proyect = 9;
+			proyect_load = {
+			    type:'proyects',
+			    name:'9'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+		case KEY_0:
+			if (selected_proyect == -1){
+			selected_proyect = 0;
+			proyect_load = {
+			    type:'proyects',
+			    name:'0'
+			};
+			
+			loadCategories(proyect_load);
+			}
+			break;
+			
+			
 		case RED:
+			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
 			    name:selected_proyect
@@ -149,9 +237,13 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	});
 			    }
 			});
+			
+			selected_proyect =-1;
+			}
 			break;
 			
 		case GREEN:
+			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
 			    name:selected_proyect
@@ -176,9 +268,13 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	});
 			    }
 			});
+			
+			selected_proyect =-1;
+			}
 			break;
 			
 		case YELLOW:
+			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
 			    name:selected_proyect
@@ -203,9 +299,13 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	});
 			    }
 			});
+			
+			selected_proyect =-1;
+			}
 			break;
 			
 		case BLUE:
+			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
 			    name:selected_proyect
@@ -230,6 +330,9 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	});
 			    }
 			});
+			
+			selected_proyect =-1;
+			}
 			break;
 			
 		default:
@@ -237,3 +340,21 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			break;
 	}
 };
+
+function loadCategories(proyect_load){
+	
+	client.getEntity(proyect_load, function (err, proyect) {
+	    if (err){
+
+	    } else {
+	    	$("#categorias").empty();
+	    	$("#categorias").append("<li> Pulsa Rojo para: " +proyect.get('cat1') + "</li>");
+	    	$("#categorias").append("<li> Pulsa Verde para: " +proyect.get('cat2') + "</li>");
+	    	$("#categorias").append("<li> Pulsa Amarillo para: " +proyect.get('cat3') + "</li>");
+	    	$("#categorias").append("<li> Pulsa Azul para: " +proyect.get('cat4') + "</li>");
+	        $("#lista").hide();
+	    	$("#categorias").show();
+	    }
+	});
+	
+}

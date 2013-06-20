@@ -6,11 +6,11 @@
 	height : 720px;
 	background-color : #ffffff;
 	background-image : url('');
+	z-index: -1;
 }
 #SceneSplash #loading{
 	position : absolute;
-	left : 380px;
-	top : 190px;
-	width : 156px;
-	height : 119px;
+	left : 420px;
+	top : 270px;
+	z-index : 97;
 }

@@ -9,10 +9,7 @@ SceneSplash.prototype.initialize = function () {
 	// this function will be called only once when the scene manager show this scene first time
 	// initialize the scene controls and styles, and initialize your variables here
 	// scene HTML and CSS will be loaded before this function is called
-	$('#loading').sfImage({
-		src:''
-	});
-	
+	$('#loading').sfLoading('show');
 	setTimeout(
 			  function() 
 			  {
@@ -35,9 +32,9 @@ SceneSplash.prototype.initialize = function () {
 						sf.scene.focus('Login');
 						
 					}
-					
+					$('#loading').sfLoading('hide');
 			  }, 5000);
-
+	
 };
 
 SceneSplash.prototype.handleShow = function (data) {

@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tv.samsung.sdk="http://www.samsung.com/tvsdk">
   <tv.samsung.sdk:VisualScene xmi:id="_hznzoNj3EeKwpr1gLHYsSQ" sId="5i7pis3fzx6cq" sName="Splash" sType="2" sBgImage="" sBgClr="#ffffff" sWidth="1280" sHeight="720">
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_RU2pMNj5EeKb3b7bYG-qIA" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="loading" sCaption="" sResizeOpt="ResizeOption_Both" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="image" sFunctionName="sfImage" sLockCaption="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_RU2pMdj5EeKb3b7bYG-qIA" sType="NUMBER" sValue="380" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_RU2pMtj5EeKb3b7bYG-qIA" sType="NUMBER" sValue="190" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_RU2pM9j5EeKb3b7bYG-qIA" sType="NUMBER" sValue="156" sName="width"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_RU2pNNj5EeKb3b7bYG-qIA" sType="NUMBER" sValue="119" sName="height"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_RU2pNdj5EeKb3b7bYG-qIA" sName="src" sValue=""/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_DsWdRNknEeKonJJN8-AxdA" sWidth="58.0" sHeight="54.0" sBgImage="images/loading/loading.png" sResolution="720" sId="loading" sCaption="" sResizeOpt="ResizeOption_None" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="loadingimage" sFunctionName="sfLoading" sLockCaption="true" sLockWidth="true" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_DsWdRdknEeKonJJN8-AxdA" sType="NUMBER" sValue="420" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_DsWdRtknEeKonJJN8-AxdA" sType="NUMBER" sValue="270" sName="top"/>
     </sComponents>
   </tv.samsung.sdk:VisualScene>
   <notation:Diagram xmi:id="_hz3EMNj3EeKwpr1gLHYsSQ" type="VisualScene" element="_hznzoNj3EeKwpr1gLHYsSQ" name="Splash.scene" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_RU00ANj5EeKb3b7bYG-qIA" type="2001" element="_RU2pMNj5EeKb3b7bYG-qIA" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_RU1bENj5EeKb3b7bYG-qIA" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RU2CINj5EeKb3b7bYG-qIA" x="380" y="190" width="156" height="119"/>
+    <children xmi:type="notation:Shape" xmi:id="_DsWdQNknEeKonJJN8-AxdA" type="2001" element="_DsWdRNknEeKonJJN8-AxdA" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_DsWdQtknEeKonJJN8-AxdA" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DsWdQ9knEeKonJJN8-AxdA" x="420" y="270" width="58" height="54"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_hz3EMdj3EeKwpr1gLHYsSQ"/>
   </notation:Diagram>
