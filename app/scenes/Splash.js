@@ -10,6 +10,7 @@ SceneSplash.prototype.initialize = function () {
 	// initialize the scene controls and styles, and initialize your variables here
 	// scene HTML and CSS will be loaded before this function is called
 	$('#loading').sfLoading('show');
+
 	setTimeout(
 			  function() 
 			  {
@@ -17,6 +18,11 @@ SceneSplash.prototype.initialize = function () {
 						client.getLoggedInUser(function(err, data, user) {
 							if(err) {
 								alert('could not get logged in user');
+								client.logout();
+								sf.scene.hide('Splash');
+								sf.scene.show('Login');
+								sf.scene.focus('Login');
+								
 							} else {
 								alert('got logged in user: '+user.get('username'));
 							}
