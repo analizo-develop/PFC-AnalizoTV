@@ -1,6 +1,8 @@
 alert('SceneDefault.js loaded');
 
 var selected_proyect = -1;
+var channel;
+var program;
 
 function SceneDefault() {
 
@@ -26,15 +28,12 @@ SceneDefault.prototype.initialize = function () {
                           alert('read failed');
                       }
                   );
-                  
-    var channel = webapis.tv.channel.getCurrentChannel();
-    var program = webapis.tv.channel.getCurrentProgram();
 
 	$('#info').sfLabel({
-		text:'Canal: '+channel.sourceID+' - '+channel.programNumber+' - '+channel.channelName
+		text:''
 	});
 	$('#info2').sfLabel({
-		text:'Programa:'+program.title+' ('+program.startTime+')'
+		text:''
 	});
 };
 
@@ -87,8 +86,49 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 		case sf.key.UP:
 			break;
 		case sf.key.DOWN:
+		    channel = webapis.tv.channel.getCurrentChannel();
+		    program = webapis.tv.channel.getCurrentProgram();
+		    
+			$('#info').sfLabel({
+				text:'Canal: '+channel.sourceID+' - '+channel.programNumber+' - '+channel.channelName
+			});
+			$('#info2').sfLabel({
+				text:'Programa:'+program.title+' ('+program.startTime+')'
+			});
 			break;
 		case sf.key.ENTER:
+			channel = webapis.tv.channel.getCurrentChannel();
+		    
+		    var channelInfo = {
+		    		  name: channel.channelName, 
+		    		  ptc: channel.ptc, 
+		    		  major: channel.major,
+		    		  minor: channel.minor, 
+		    		  lcn: channel.lcn,
+		    		  sourceID: channel.sourceID,
+		    		  programNumber: channel.programNumber,
+		    		  transportStreamID: channel.transportStreamID,
+		    		  originalNetworkID: channel.originalNetworkID,
+		    		  servicelName: channel.servicelName,
+		    		  type: 'channelinfos'
+		    		};
+
+		    		client.createEntity(channelInfo, function (err, channelInfo) {
+		    		    if (err) {
+		    		        alert('entity not created');
+		    		    } else {
+		    		        alert('entity created');
+		    		         
+		    		        channelInfo.save(function(err){
+		    		            if (err){
+		    		                //error
+		    		            } else {
+		    		                //success
+		    		            }
+		    		        });
+		    		    }
+		    		});   
+
 			break;
 		case KEY_1:
 			if (selected_proyect == -1){
