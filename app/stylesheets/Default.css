@@ -30,14 +30,7 @@
 	background-color: white;
 	z-index: -1;
 }
-#SceneDefault #info{
-	position : absolute;
-	font-size : 10pt;
-	color : #000000;
-	left : 70px;
-	top : 70px;
-	width : 731px;
-}
+
 #SceneDefault #info2{
 	position : absolute;
 	font-size : 10pt;
@@ -45,4 +38,20 @@
 	left : 80px;
 	top : 130px;
 	width : 711px;
+}
+#SceneDefault #info{
+	position : absolute;
+	font-size : 10pt;
+	color : #000000;
+	left : 140px;
+	top : 144px;
+	width : 130px;
+}
+#SceneDefault #svecLabel_5i7pmu3edgpr6{
+	position : absolute;
+	font-size : 10pt;
+	color : #000000;
+	left : 20px;
+	top : 229px;
+	width : 531px;
 }

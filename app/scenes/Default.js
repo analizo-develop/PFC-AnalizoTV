@@ -14,6 +14,9 @@ SceneDefault.prototype.initialize = function () {
 	// initialize the scene controls and styles, and initialize your variables here
 	// scene HTML and CSS will be loaded before this function is called
 	
+	//Disable + - Channel button
+	sf.service.setChannelControl('disable');
+	
 	sf.service.PIG.show('tvsignal');
 	$("#categorias").hide();
       
@@ -29,12 +32,6 @@ SceneDefault.prototype.initialize = function () {
                       }
                   );
 
-	$('#info').sfLabel({
-		text:''
-	});
-	$('#info2').sfLabel({
-		text:''
-	});
 };
 
 SceneDefault.prototype.handleShow = function (data) {
@@ -86,49 +83,10 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 		case sf.key.UP:
 			break;
 		case sf.key.DOWN:
-		    channel = webapis.tv.channel.getCurrentChannel();
-		    program = webapis.tv.channel.getCurrentProgram();
-		    
-			$('#info').sfLabel({
-				text:'Canal: '+channel.sourceID+' - '+channel.programNumber+' - '+channel.channelName
-			});
-			$('#info2').sfLabel({
-				text:'Programa:'+program.title+' ('+program.startTime+')'
-			});
 			break;
 		case sf.key.ENTER:
-			channel = webapis.tv.channel.getCurrentChannel();
-		    
-		    var channelInfo = {
-		    		  name: channel.channelName, 
-		    		  ptc: channel.ptc, 
-		    		  major: channel.major,
-		    		  minor: channel.minor, 
-		    		  lcn: channel.lcn,
-		    		  sourceID: channel.sourceID,
-		    		  programNumber: channel.programNumber,
-		    		  transportStreamID: channel.transportStreamID,
-		    		  originalNetworkID: channel.originalNetworkID,
-		    		  servicelName: channel.servicelName,
-		    		  type: 'channelinfos'
-		    		};
-
-		    		client.createEntity(channelInfo, function (err, channelInfo) {
-		    		    if (err) {
-		    		        alert('entity not created');
-		    		    } else {
-		    		        alert('entity created');
-		    		         
-		    		        channelInfo.save(function(err){
-		    		            if (err){
-		    		                //error
-		    		            } else {
-		    		                //success
-		    		            }
-		    		        });
-		    		    }
-		    		});   
-
+			//to get channel info
+			//channelInfo2API();
 			break;
 		case KEY_1:
 			if (selected_proyect == -1){
@@ -139,7 +97,10 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
+			
+			
 			break;
 			
 		case KEY_2:
@@ -151,6 +112,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -163,6 +125,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -175,6 +138,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -187,6 +151,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -199,6 +164,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -211,6 +177,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -223,6 +190,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -235,6 +203,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -247,6 +216,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			};
 			
 			loadCategories(proyect_load);
+			tuneChannel(proyect_load);
 			}
 			break;
 			
@@ -268,9 +238,9 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	
 			    	proyect.save(function(err){
 			    		if (err){
-			    			//error('dog not saved');
+			    			//error('proyect not saved');
 			    		} else {
-			    			//success('dog is saved');
+			    			//success('proyect is saved');
 			    			$("#lista").show();
 					    	$("#categorias").hide();
 			    		}
@@ -299,9 +269,9 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	
 			    	proyect.save(function(err){
 			    		if (err){
-			    			//error('dog not saved');
+			    			//error('proyect not saved');
 			    		} else {
-			    			//success('dog is saved');
+			    			//success('proyect is saved');
 			    			$("#lista").show();
 					    	$("#categorias").hide();
 			    		}
@@ -330,9 +300,9 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	
 			    	proyect.save(function(err){
 			    		if (err){
-			    			//error('dog not saved');
+			    			//error('proyect not saved');
 			    		} else {
-			    			//success('dog is saved');
+			    			//success('proyect is saved');
 			    			$("#lista").show();
 					    	$("#categorias").hide();
 			    		}
@@ -361,9 +331,9 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    	
 			    	proyect.save(function(err){
 			    		if (err){
-			    			//error('dog not saved');
+			    			//error('proyect not saved');
 			    		} else {
-			    			//success('dog is saved');
+			    			//success('proyect is saved');
 			    			$("#lista").show();
 					    	$("#categorias").hide();
 			    		}
@@ -397,4 +367,92 @@ function loadCategories(proyect_load){
 	    }
 	});
 	
+}
+
+function tuneChannel(proyect_load){
+	
+var MyChannel;
+
+client.getEntity(proyect_load, function (err, proyect) {
+    if (err){
+
+    } else {
+
+		try {
+		    // gets 100 channel list of Digital channels
+		    webapis.tv.channel.getChannelList(function (TVChannels) {
+		    	// populate my data structure
+		    	for(i=0;i<TVChannels.length;i++){
+		    		
+		    		if(proyect.get('OnChannel') == TVChannels[i].channelName)
+		    			{
+		    				MyChannel=TVChannels[i];
+		    			}
+			    	
+		    	}
+		    }
+		    , errorCB, webapis.tv.channel.NAVIGATOR_MODE_DIGITAL, 0, 100);
+		    
+		    webapis.tv.channel.tune({
+		    ptc: MyChannel.ptc,
+		    major: MyChannel.major,
+		    minor: MyChannel.minor,
+		    sourceID: MyChannel.sourceID,
+		    programNumber: MyChannel.programNumber,
+		    transportStreamID: MyChannel.transportStreamID,
+		    tunecallback: {
+		        onsucess: function(programList) { console.log("getting program list is successfully"); },
+		        onerror: function(channelList) { console.log("getting program list is successfully");  }
+		    }
+		}, successCB, errorCB, 0);
+		    
+		    alert('Channel tuned');
+		} catch (error) {
+		    alert(error);
+		}				
+		
+    }
+});
+}
+
+function channelInfo2API() {
+channel = webapis.tv.channel.getCurrentChannel();
+
+var channelInfo = {
+		  name: channel.channelName, 
+		  ptc: channel.ptc, 
+		  major: channel.major,
+		  minor: channel.minor, 
+		  lcn: channel.lcn,
+		  sourceID: channel.sourceID,
+		  programNumber: channel.programNumber,
+		  transportStreamID: channel.transportStreamID,
+		  originalNetworkID: channel.originalNetworkID,
+		  servicelName: channel.servicelName,
+		  type: 'channelinfos'
+		};
+
+		client.createEntity(channelInfo, function (err, channelInfo) {
+		    if (err) {
+		        alert('entity not created');
+		    } else {
+		        alert('entity created');
+		         
+		        channelInfo.save(function(err){
+		            if (err){
+		                //error
+		            } else {
+		                //success
+		            }
+		        });
+		    }
+		});   
+}
+
+function successCB() {
+    console.log("tuning is successful");
+}
+
+function errorCB(error) {
+    console.log(error.name);
 }
