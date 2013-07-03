@@ -3,6 +3,8 @@ alert('SceneDefault.js loaded');
 var selected_proyect = -1;
 var channel;
 var program;
+var refreshInterval;
+var now;
 
 function SceneDefault() {
 
@@ -13,9 +15,6 @@ SceneDefault.prototype.initialize = function () {
 	// this function will be called only once when the scene manager show this scene first time
 	// initialize the scene controls and styles, and initialize your variables here
 	// scene HTML and CSS will be loaded before this function is called
-	
-	//Disable + - Channel button
-	sf.service.setChannelControl('disable');
 	
 	sf.service.PIG.show('tvsignal');
 	$("#categorias").hide();
@@ -95,12 +94,8 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    type:'proyects',
 			    name:'1'
 			};
-			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
-			
-			
 			break;
 			
 		case KEY_2:
@@ -111,8 +106,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'2'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -124,8 +118,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'3'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -137,8 +130,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'4'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -150,8 +142,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'5'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -163,8 +154,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'6'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -176,8 +166,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'7'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -189,8 +178,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'8'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -202,8 +190,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'9'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -215,8 +202,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:'0'
 			};
 			
-			loadCategories(proyect_load);
-			tuneChannel(proyect_load);
+			loadProgram(proyect_load);
 			}
 			break;
 			
@@ -415,6 +401,53 @@ client.getEntity(proyect_load, function (err, proyect) {
 });
 }
 
+function loadProgram(proyect_load){
+	 now=new Date();
+	 var weekday=new Array(7);
+	 weekday[0]="Sunday";
+	 weekday[1]="Monday";
+	 weekday[2]="Tuesday";
+	 weekday[3]="Wednesday";
+	 weekday[4]="Thursday";
+	 weekday[5]="Friday";
+	 weekday[6]="Saturday";
+	 
+	 var now_day = weekday[now.getDay()];
+	 
+	 client.getEntity(proyect_load, function(err, proyecto){
+	 		if (err){
+	 			
+	 		} else {
+	 			var proyect_day = proyecto.get(now_day);  
+	 			if(proyect_day){ 
+	 				
+	 				if(now.getHours() >= proyecto.get('HoraInicio'))
+	 				{
+	 					if(now.getMinutes() >= proyecto.get('MinutoInicio'))
+	 					{
+	 						if(now.getHours() <= proyecto.get('HoraFin'))
+	 						{
+	 							if(now.getMinutes() <= proyecto.get('MinutoFin'))
+	 							{	
+	 								loadCategories(proyect_load);
+	 								tuneChannel(proyect_load);
+	 								
+	 								refreshInterval = setInterval(isOnChannel, 5 * 1000);
+	 					            isOnChannel();
+	 					            //On return will be
+	 					            //clearInterval(refreshInterval);
+	 					            //refreshInterval = 0;
+	 					            
+	 							} else{selected_proyect =-1;}
+	 						} else{selected_proyect =-1;}
+	 					} else{selected_proyect =-1;}
+	 				} else{selected_proyect =-1;}
+	 			} else{selected_proyect =-1;}
+	 		}
+	 	});
+	 }
+
+
 function channelInfo2API() {
 channel = webapis.tv.channel.getCurrentChannel();
 
@@ -447,6 +480,10 @@ var channelInfo = {
 		        });
 		    }
 		});   
+}
+
+function isOnChannel(){
+	//Comprobar el canal sintonizado
 }
 
 function successCB() {

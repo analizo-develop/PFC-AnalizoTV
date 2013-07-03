@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tv.samsung.sdk="http://www.samsung.com/tvsdk">
-  <tv.samsung.sdk:VisualScene xmi:id="_vmqeMdHPEeKy7eux3Z8tBA" sId="5i7pemv83r8kk" sName="Default" sType="2" sBgImage="" sBgClr="transparent" sWidth="1280" sHeight="720">
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_s0gPkd94EeKWtZgbi8FRqQ" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="svecLabel_5i7pmu3edgpr6" sCaption="label" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="label" sFunctionName="sfLabel" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_s0gPkt94EeKWtZgbi8FRqQ" sType="NUMBER" sValue="10" sName="font-size"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_s0gPk994EeKWtZgbi8FRqQ" sType="COLOR" sValue="#000000" sName="color"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_s0gPlN94EeKWtZgbi8FRqQ" sType="NUMBER" sValue="" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_s0gPld94EeKWtZgbi8FRqQ" sType="NUMBER" sValue="" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_s0gPlt94EeKWtZgbi8FRqQ" sType="NUMBER" sValue="" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_s0gPl994EeKWtZgbi8FRqQ" sAllowArrayNameChange="true" sNullString="" sName="text" sOrder="-1" sValue="label"/>
-    </sComponents>
-  </tv.samsung.sdk:VisualScene>
+  <tv.samsung.sdk:VisualScene xmi:id="_vmqeMdHPEeKy7eux3Z8tBA" sId="5i7pemv83r8kk" sName="Default" sType="2" sBgImage="" sBgClr="transparent" sWidth="1280" sHeight="720"/>
   <notation:Diagram xmi:id="_vntnENHPEeKy7eux3Z8tBA" type="VisualScene" element="_vmqeMdHPEeKy7eux3Z8tBA" name="Default.scene" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_s1P2cN94EeKWtZgbi8FRqQ" type="2001" element="_s0gPkd94EeKWtZgbi8FRqQ" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_s1ZAYN94EeKWtZgbi8FRqQ" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_s1P2cd94EeKWtZgbi8FRqQ" x="20" y="229" width="531" height="40"/>
-    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_vntnEdHPEeKy7eux3Z8tBA">
       <verticalGuides xmi:type="notation:Guide" xmi:id="_Mt3m8N9PEeK5Suny7kk7nw" position="239"/>
     </styles>
