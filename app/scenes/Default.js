@@ -74,6 +74,8 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 	var YELLOW = 21;
 	var BLUE = 22;
 	
+	var RETURN = 88;
+	
 	switch (keyCode) {
 		case sf.key.LEFT:
 			break;
@@ -329,6 +331,12 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			
 			selected_proyect =-1;
 			}
+			break;
+			
+		case RETURN:
+			sf.scene.hide('Default');
+			sf.scene.show('Login');
+			sf.scene.focus('Login');
 			break;
 			
 		default:

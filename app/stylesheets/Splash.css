@@ -4,13 +4,84 @@
 	top : 0px;
 	width : 1280px;
 	height : 720px;
-	background-color : #ffffff;
+	background-color : #313131;
 	background-image : url('');
 	z-index: -1;
 }
+
+#SceneSplash #body_splash{
+	width : 100%;
+	height : 70%;
+	opacity: 0.3;
+	background-image : url('../../images/loading/back.png');
+	background-size: cover;
+	}
+
+#SceneSplash #overLogo{
+	position : absolute;
+	width : 100%;
+	z-index : 97;
+	padding-top: 15%;
+	}
+	
+#SceneSplash #logo{
+	margin: 0 auto;
+	display:block;
+	
+	}
+
+#SceneSplash #text{
+	margin: 0 auto;
+	display:block;
+	text-align: center;
+	color: white;
+	font-family: Bitter, arial, sans-serif;
+		
+	}
+	
+.classgreen{
+	color : #7CCA00;
+}
+
 #SceneSplash #loading{
 	position : absolute;
-	left : 420px;
-	top : 270px;
+	left : 590px;
+	top : 340px;
 	z-index : 97;
+}
+
+#SceneSplash #colours{
+	z-index : 97;
+	height: 30%;
+	width: 100%;
+	border: none;
+	border-collapse:collapse;
+}
+
+#SceneSplash #red{
+	z-index : 97;
+	background-color : #c13d3d;
+	width: 25%;
+	height: 100%;
+}
+
+#SceneSplash #blue{
+	z-index : 97;
+	background-color : #7ebec8;
+	width: 25%;
+	height: 100%;
+}
+
+#SceneSplash #yellow{
+	z-index : 97;
+	background-color : #e0ed14;
+	width: 25%;
+	height: 100%;
+}
+
+#SceneSplash #green{
+	z-index : 97;
+	background-color : #83b321;
+	width: 25%;
+	height: 100%;
 }
