@@ -3,7 +3,8 @@
  "scenes": [
   "Login",
   "Default",
-  "Splash"
+  "Splash",
+  "Registro"
  ],
  "theme": "base",
  "modules": ["ime"]

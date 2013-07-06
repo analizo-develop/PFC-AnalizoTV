@@ -6,16 +6,99 @@
 	height : 720px;
 	background-color : #ffffff;
 	background-image : url('');
+	z-index: -1;
+	display:inline-block;
 }
+
+#SceneLogin #body_login{
+	width : 90%;
+	height : 100%;
+	background-image : url('../../images/login.jpg');
+	background-size: cover;
+	float: left;
+	-moz-box-shadow: 0 0 1em #000000;
+	-webkit-box-shadow: 0 0 1em #000000;
+	box-shadow: 0 0 1em #000000;
+	}
+
+#SceneLogin #ish1{
+	position : relative;
+	left : 0px;
+	top : 40%;
+	text-align: center;
+	color: white;
+	opacity: 0.5;
+	font-family: Bitter, arial, sans-serif;
+	}
+	
+#SceneLogin #ish2{
+	text-align: left;
+	color: black;
+	opacity: 0.9;
+	font: 3.5em Bitter, arial, sans-serif;
+}
+	
+#SceneLogin #new {
+	text-align: center;
+	color: white;
+	opacity: 0.6;
+	font: small-caps 0.5em Bitter, arial, sans-serif;
+}
+
+#SceneLogin #overH2{
+	position: relative;
+	z-index : 97;
+	width: 40%;
+	float: left;
+	margin-left: 10%;
+	padding-top: 2%;
+	}
+	
+#SceneLogin #overLogo{
+	position : relative;
+	z-index : 97;
+	width: 30%;
+	float: right;
+	opacity: 0.9;
+	text-align: right;	
+	padding-top: 2em;
+	margin-right: 5%;
+	}
+
+#SceneLogin #toReg{
+	width : 10%;
+	height : 100%;
+	background-color : #313131;
+	float: right;
+}
+
 #SceneLogin #password{
 	position : absolute;
-	left : 170px;
-	top : 230px;
-	width : 173px;
+	left : 110px;
+	top : 310px;
+	width : 250px;
 }
 #SceneLogin #user{
 	position : absolute;
-	left : 170px;
-	top : 150px;
-	width : 173px;
+	left : 110px;
+	top : 210px;
+	width : 250px;
+}
+#SceneLogin #lUsuario{
+	position : absolute;
+	opacity : 0.9;
+	font : 15pt Bitter, arial, sans-serif;
+	color : #000000;
+	left : 140px;
+	top : 190px;
+	width : 258px;
+}
+#SceneLogin #lPass{
+	position : absolute;
+	opacity : 0.9;
+	font : 15pt Bitter, arial, sans-serif;
+	color : #000000;
+	left : 140px;
+	top : 290px;
+	width : 130px;
 }

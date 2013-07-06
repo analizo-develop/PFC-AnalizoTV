@@ -1,0 +1,154 @@
+#SceneRegistro {
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 1280px;
+	height : 720px;
+	background-color : #ffffff;
+	background-image : url('');
+	z-index: -1;
+	display:inline-block;
+}
+
+#SceneRegistro #body_registro{
+	width : 90%;
+	height : 100%;
+	background-image : url('../../images/registro.jpg');
+	background-size: cover;
+	float: right;
+	-moz-box-shadow: 0 0 1em #000000;
+	-webkit-box-shadow: 0 0 1em #000000;
+	box-shadow: 0 0 1em #000000;
+	}
+
+#SceneRegistro #ish1{
+	position : relative;
+	left : 0px;
+	top : 40%;
+	text-align: center;
+	color: white;
+	opacity: 0.5;
+	font-family: Bitter, arial, sans-serif;
+	}
+	
+#SceneRegistro #ish2{
+	text-align: right;
+	color: #7CCA00;
+	opacity: 0.9;
+	font: 3.5em Bitter, arial, sans-serif;
+	text-shadow: 0 0 10px #000000;
+	margin-bottom: 0px;
+}
+
+#SceneRegistro #usuarios{
+	text-align: right;
+	color: white;
+	opacity: 0.9;
+	font: 1.5em Bitter, arial, sans-serif;
+	text-shadow: 0 0 10px #000000;
+	margin-right: 0px;
+	width: 100%;
+}
+	
+#SceneRegistro #new {
+	text-align: center;
+	color: white;
+	opacity: 0.6;
+	font: small-caps 0.5em Bitter, arial, sans-serif;
+	text-shadow: 0 0 1em #000000;
+}
+
+#SceneRegistro #overH2{
+	position: relative;
+	z-index : 97;
+	width: 60%;
+	float: right;
+	margin-right: 10%;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	}
+	
+#SceneRegistro #overLogo{
+	position : relative;
+	z-index : 97;
+	width: 10%;
+	float: left;
+	opacity: 0.9;
+	text-align: left;	
+	padding-top: 2em;
+	margin-left: 5%;
+	}
+
+#SceneRegistro #toLog{
+	width : 10%;
+	height : 100%;
+	background-color : #313131;
+	float: left;
+}
+
+#SceneRegistro #password{
+	position : absolute;
+	left : 170px;
+	top : 230px;
+	width : 173px;
+}
+#SceneRegistro #user{
+	position : absolute;
+	left : 170px;
+	top : 150px;
+	width : 173px;
+}
+#SceneRegistro #userR{
+	position : absolute;
+	left : 910px;
+	top : 230px;
+	width : 250px;
+}
+#SceneRegistro #mailR{
+	position : absolute;
+	left : 910px;
+	top : 330px;
+	width : 250px;
+}
+#SceneRegistro #pass1R{
+	position : absolute;
+	left : 910px;
+	top : 520px;
+	width : 250px;
+}
+#SceneRegistro #pass2R{
+	position : absolute;
+	left : 910px;
+	top : 445px;
+	width : 250px;
+}
+#SceneRegistro #lUserR{
+	position : absolute;
+	opacity : 0.9;
+	font : 15pt Bitter, arial, sans-serif;
+	text-shadow : 0 0 10px #000000;
+	color : white;
+	left : 940px;
+	top : 210px;
+	width : 250px;
+}
+#SceneRegistro #lMailR{
+	position : absolute;
+	opacity : 0.9;
+	font : 15pt Bitter, arial, sans-serif;
+	text-shadow : 0 0 10px #000000;
+	color : white;
+	left : 940px;
+	top : 310px;
+	width : 250px;
+}
+#SceneRegistro #lPass1R{
+	position : absolute;
+	opacity : 0.9;
+	font : 15pt Bitter, arial, sans-serif;
+	text-shadow : 0 0 10px #000000;
+	color : white;
+	left : 940px;
+	top : 420px;
+	width : 250px;
+}

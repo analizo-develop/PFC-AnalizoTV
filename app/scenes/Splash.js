@@ -11,6 +11,25 @@ SceneSplash.prototype.initialize = function () {
 	// scene HTML and CSS will be loaded before this function is called
 
 	$('#loading').sfLoading('show');
+	
+	  var options = {
+		  		type:'users',
+		  		qs:{limit:9999} //limit statement set to 9999
+		  	}
+	  
+	client.createCollection(options, function (err, users) {
+			if (err) {
+				error('could not get all channels');
+			} else {
+				//we got 50 channels, now display the Entities:
+				while(users.hasNextEntity()) {
+					//get a reference to the dog
+					var user = users.getNextEntity();
+					userCount=userCount+1;
+				}
+			}
+		});
+	
 	setTimeout(
 			  function() 
 			  {
@@ -19,26 +38,29 @@ SceneSplash.prototype.initialize = function () {
 							if(err) {
 								alert('could not get logged in user');
 								client.logout();
-								sf.scene.hide('Splash');
+								$('#loading').sfLoading('hide');
+								sf.scene.hide('Splash');;
 								sf.scene.show('Login');
 								sf.scene.focus('Login');
 								
 							} else {
 								alert('got logged in user: '+user.get('username'));
 							}
+						
 						});
 						
+						$('#loading').sfLoading('hide');
 						sf.scene.hide('Splash');
 						sf.scene.show('Default');
 						sf.scene.focus('Default');
 					}
 					else{ 
+						$('#loading').sfLoading('hide');
 						sf.scene.hide('Splash');
 						sf.scene.show('Login');
 						sf.scene.focus('Login');
 						
 					}
-					$('#loading').sfLoading('hide');
 			  }, 5000);
 	
 };

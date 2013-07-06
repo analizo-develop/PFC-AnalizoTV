@@ -1,5 +1,8 @@
 alert('SceneLogin.js loaded');
 
+var username = '';
+var password = '';
+
 
 function SceneLogin() {
 
@@ -33,13 +36,20 @@ SceneLogin.prototype.initialize = function () {
 	        if (text) {
 	        	username = text;
 	        	$('#password').sfTextInput('focus');
+	        	$('#password').sfTextInput('setKeypadPos', 400, 200);
 	        }
 	        else {
 	        	//error
 	        }
 	    }
 	});
-		
+	$('#lUsuario').sfLabel({
+		text:'Nombre de usuario:'
+	});
+	$('#lPass').sfLabel({
+		text:'Contraseña:'
+	});
+
 };
 
 SceneLogin.prototype.handleShow = function (data) {
@@ -55,6 +65,8 @@ SceneLogin.prototype.handleHide = function () {
 SceneLogin.prototype.handleFocus = function () {
 	alert("SceneLogin.handleFocus()");
 	// this function will be called when the scene manager focus this scene
+	$('#user').sfTextInput('blur');
+	$('#password').sfTextInput('blur');
 };
 
 SceneLogin.prototype.handleBlur = function () {
@@ -67,17 +79,25 @@ SceneLogin.prototype.handleKeyDown = function (keyCode) {
 	// TODO : write an key event handler when this scene get focued
 	switch (keyCode) {
 		case sf.key.LEFT:
+			('#user').sfTextInput('focus');
+			$('#user').sfTextInput('setKeypadPos', 400, 200);
 			break;
 		case sf.key.RIGHT:
+			sf.scene.hide('Login');
+			sf.scene.show('Registro');
+			sf.scene.focus('Registro');
 			break;
 		case sf.key.UP:
 			$('#user').sfTextInput('focus');
+			$('#user').sfTextInput('setKeypadPos', 400, 200);
 			break;
 		case sf.key.DOWN:
-			$('#password').sfTextInput('focus');
+			('#user').sfTextInput('focus');
+			$('#user').sfTextInput('setKeypadPos', 400, 200);
 			break;
 		case sf.key.ENTER:
 			$('#user').sfTextInput('focus');
+			$('#user').sfTextInput('setKeypadPos', 400, 200);
 			break;
 		default:
 			alert("handle default key event, key code(" + keyCode + ")");
