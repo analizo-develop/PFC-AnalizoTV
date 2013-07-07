@@ -16,7 +16,7 @@ SceneLogin.prototype.initialize = function () {
 	// scene HTML and CSS will be loaded before this function is called
 	$('#password').sfTextInput({
 		text:'',
-		maxlength:10,
+		maxlength:30,
 		oncomplete: function (text) 
 		{
 	        if (text) {
@@ -30,7 +30,7 @@ SceneLogin.prototype.initialize = function () {
 	});
 	$('#user').sfTextInput({
 		text:'',
-		maxlength:10,
+		maxlength:30,
 		oncomplete: function (text) 
 		{
 	        if (text) {

@@ -19,7 +19,7 @@ SceneRegistro.prototype.initialize = function () {
 	
 	$('#userR').sfTextInput({
 		text:'',
-		maxlength:10,
+		maxlength:30,
 		oncomplete: function (text) 
 		{
 		    if (text) {
@@ -34,7 +34,7 @@ SceneRegistro.prototype.initialize = function () {
 	});
 	$('#mailR').sfTextInput({
 		text:'',
-		maxlength:10,
+		maxlength:30,
 		oncomplete: function (text) 
 		{
 		    if (text) {
@@ -47,29 +47,29 @@ SceneRegistro.prototype.initialize = function () {
 		    }
 		}
 	});
-	$('#pass1R').sfTextInput({
+	$('#pass2R').sfTextInput({
 		text:'',
-		maxlength:10,
+		maxlength:30,
 		oncomplete: function (text) 
 		{
 		    if (text) {
-		    	password = text;
-		    	$('#pass2R').sfTextInput('focus');
-		    	$('#pass2R').sfTextInput('setKeypadPos', 150, 200);
+		    	password2 = text;
+		    	createUser();
 		    }
 		    else {
 		    	//error
 		    }
 		}
 	});
-	$('#pass2R').sfTextInput({
+	$('#pass1R').sfTextInput({
 		text:'',
-		maxlength:10,
+		maxlength:30,
 		oncomplete: function (text) 
 		{
 		    if (text) {
-		    	password2 = text;
-		    	createUser();
+		    	password = text;
+		    	$('#pass2R').sfTextInput('focus');
+		    	$('#pass2R').sfTextInput('setKeypadPos', 150, 200);
 		    }
 		    else {
 		    	//error

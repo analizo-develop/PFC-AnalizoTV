@@ -110,13 +110,13 @@
 	top : 330px;
 	width : 250px;
 }
-#SceneRegistro #pass1R{
+#SceneRegistro #pass2R{
 	position : absolute;
 	left : 910px;
 	top : 520px;
 	width : 250px;
 }
-#SceneRegistro #pass2R{
+#SceneRegistro #pass1R{
 	position : absolute;
 	left : 910px;
 	top : 445px;

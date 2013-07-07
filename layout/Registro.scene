@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tv.samsung.sdk="http://www.samsung.com/tvsdk">
   <tv.samsung.sdk:VisualScene xmi:id="_79QgAOYeEeKkxchUAHGJLQ" sId="5i7qmpwdkw0gj" sName="Registro" sType="2" sBgImage="" sBgClr="#ffffff" sWidth="1280" sHeight="720">
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_I1oM4uZcEeKzaqmphUy48A" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="userR" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM4-ZcEeKzaqmphUy48A" sType="NUMBER" sValue="910" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM5OZcEeKzaqmphUy48A" sType="NUMBER" sValue="230" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM5eZcEeKzaqmphUy48A" sType="NUMBER" sValue="250" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM5uZcEeKzaqmphUy48A" sName="text" sValue=""/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM5-ZcEeKzaqmphUy48A" sName="maxlength" sValue="10" sType="NUMBER"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM6OZcEeKzaqmphUy48A" sName="oncomplete" sValue="function" sType="FUNCTION"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_SQbtgObrEeKu445jK59Q9Q" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="userR" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtgebrEeKu445jK59Q9Q" sType="NUMBER" sValue="910" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtgubrEeKu445jK59Q9Q" sType="NUMBER" sValue="230" sName="top"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtg-brEeKu445jK59Q9Q" sType="NUMBER" sValue="250" sName="width"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbthObrEeKu445jK59Q9Q" sName="text" sValue=""/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbthebrEeKu445jK59Q9Q" sName="maxlength" sValue="30" sType="NUMBER"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbthubrEeKu445jK59Q9Q" sName="oncomplete" sValue="function" sType="FUNCTION"/>
     </sComponents>
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_I1oM6eZcEeKzaqmphUy48A" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="mailR" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM6uZcEeKzaqmphUy48A" sType="NUMBER" sValue="910" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM6-ZcEeKzaqmphUy48A" sType="NUMBER" sValue="330" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM7OZcEeKzaqmphUy48A" sType="NUMBER" sValue="250" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM7eZcEeKzaqmphUy48A" sName="text" sValue=""/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM7uZcEeKzaqmphUy48A" sName="maxlength" sValue="10" sType="NUMBER"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM7-ZcEeKzaqmphUy48A" sName="oncomplete" sValue="function" sType="FUNCTION"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_SQbth-brEeKu445jK59Q9Q" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="mailR" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtiObrEeKu445jK59Q9Q" sType="NUMBER" sValue="910" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtiebrEeKu445jK59Q9Q" sType="NUMBER" sValue="330" sName="top"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtiubrEeKu445jK59Q9Q" sType="NUMBER" sValue="250" sName="width"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbti-brEeKu445jK59Q9Q" sName="text" sValue=""/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtjObrEeKu445jK59Q9Q" sName="maxlength" sValue="30" sType="NUMBER"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtjebrEeKu445jK59Q9Q" sName="oncomplete" sValue="function" sType="FUNCTION"/>
     </sComponents>
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_I1oM8OZcEeKzaqmphUy48A" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="pass1R" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM8eZcEeKzaqmphUy48A" sType="NUMBER" sValue="910" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM8uZcEeKzaqmphUy48A" sType="NUMBER" sValue="520" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM8-ZcEeKzaqmphUy48A" sType="NUMBER" sValue="250" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM9OZcEeKzaqmphUy48A" sName="text" sValue=""/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM9eZcEeKzaqmphUy48A" sName="maxlength" sValue="10" sType="NUMBER"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM9uZcEeKzaqmphUy48A" sName="oncomplete" sValue="function" sType="FUNCTION"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_SQbtjubrEeKu445jK59Q9Q" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="pass2R" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtj-brEeKu445jK59Q9Q" sType="NUMBER" sValue="910" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtkObrEeKu445jK59Q9Q" sType="NUMBER" sValue="520" sName="top"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtkebrEeKu445jK59Q9Q" sType="NUMBER" sValue="250" sName="width"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtkubrEeKu445jK59Q9Q" sName="text" sValue=""/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtk-brEeKu445jK59Q9Q" sName="maxlength" sValue="30" sType="NUMBER"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtlObrEeKu445jK59Q9Q" sName="oncomplete" sValue="function" sType="FUNCTION"/>
     </sComponents>
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_I1oM9-ZcEeKzaqmphUy48A" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="pass2R" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM-OZcEeKzaqmphUy48A" sType="NUMBER" sValue="910" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM-eZcEeKzaqmphUy48A" sType="NUMBER" sValue="445" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM-uZcEeKzaqmphUy48A" sType="NUMBER" sValue="250" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM--ZcEeKzaqmphUy48A" sName="text" sValue=""/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM_OZcEeKzaqmphUy48A" sName="maxlength" sValue="10" sType="NUMBER"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oM_eZcEeKzaqmphUy48A" sName="oncomplete" sValue="function" sType="FUNCTION"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_SQbtlebrEeKu445jK59Q9Q" sWidth="173.0" sHeight="37.0" sBgImage="images/input/input.png" sResolution="720" sId="pass1R" sCaption="" sResizeOpt="ResizeOption_Width" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="input" sFunctionName="sfTextInput" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtlubrEeKu445jK59Q9Q" sType="NUMBER" sValue="910" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtl-brEeKu445jK59Q9Q" sType="NUMBER" sValue="445" sName="top"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtmObrEeKu445jK59Q9Q" sType="NUMBER" sValue="250" sName="width"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtmebrEeKu445jK59Q9Q" sName="text" sValue=""/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtmubrEeKu445jK59Q9Q" sName="maxlength" sValue="30" sType="NUMBER"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtm-brEeKu445jK59Q9Q" sName="oncomplete" sValue="function" sType="FUNCTION"/>
     </sComponents>
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_I1oM_uZcEeKzaqmphUy48A" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="lUserR" sCaption="Nombre de Usuario:" sResizeOpt="ResizeOption_Width" sFontClr="white" sFontSize="10" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="label" sFunctionName="sfLabel" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oM_-ZcEeKzaqmphUy48A" sType="NUMBER" sValue="10" sName="font-size"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNAOZcEeKzaqmphUy48A" sType="COLOR" sValue="white" sName="color"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNAeZcEeKzaqmphUy48A" sType="NUMBER" sValue="940" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNAuZcEeKzaqmphUy48A" sType="NUMBER" sValue="210" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNA-ZcEeKzaqmphUy48A" sType="NUMBER" sValue="250" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oNBOZcEeKzaqmphUy48A" sName="text" sValue="Nombre de Usuario:"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_SQbtnObrEeKu445jK59Q9Q" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="lUserR" sCaption="Nombre de Usuario:" sResizeOpt="ResizeOption_Width" sFontClr="white" sFontSize="10" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="label" sFunctionName="sfLabel" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtnebrEeKu445jK59Q9Q" sType="NUMBER" sValue="10" sName="font-size"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtnubrEeKu445jK59Q9Q" sType="COLOR" sValue="white" sName="color"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtn-brEeKu445jK59Q9Q" sType="NUMBER" sValue="940" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtoObrEeKu445jK59Q9Q" sType="NUMBER" sValue="210" sName="top"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtoebrEeKu445jK59Q9Q" sType="NUMBER" sValue="250" sName="width"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtoubrEeKu445jK59Q9Q" sName="text" sValue="Nombre de Usuario:"/>
     </sComponents>
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_I1oNBeZcEeKzaqmphUy48A" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="lMailR" sCaption="Correo electrónico:" sResizeOpt="ResizeOption_Width" sFontClr="white" sFontSize="10" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="label" sFunctionName="sfLabel" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNBuZcEeKzaqmphUy48A" sType="NUMBER" sValue="10" sName="font-size"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNB-ZcEeKzaqmphUy48A" sType="COLOR" sValue="white" sName="color"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNCOZcEeKzaqmphUy48A" sType="NUMBER" sValue="940" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNCeZcEeKzaqmphUy48A" sType="NUMBER" sValue="310" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNCuZcEeKzaqmphUy48A" sType="NUMBER" sValue="250" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oNC-ZcEeKzaqmphUy48A" sName="text" sValue="Correo electrónico:"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_SQbto-brEeKu445jK59Q9Q" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="lMailR" sCaption="Correo electrónico:" sResizeOpt="ResizeOption_Width" sFontClr="white" sFontSize="10" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="label" sFunctionName="sfLabel" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtpObrEeKu445jK59Q9Q" sType="NUMBER" sValue="10" sName="font-size"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtpebrEeKu445jK59Q9Q" sType="COLOR" sValue="white" sName="color"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtpubrEeKu445jK59Q9Q" sType="NUMBER" sValue="940" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtp-brEeKu445jK59Q9Q" sType="NUMBER" sValue="310" sName="top"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtqObrEeKu445jK59Q9Q" sType="NUMBER" sValue="250" sName="width"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtqebrEeKu445jK59Q9Q" sName="text" sValue="Correo electrónico:"/>
     </sComponents>
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_I1oNDOZcEeKzaqmphUy48A" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="lPass1R" sCaption="Contraseña (2 veces):" sResizeOpt="ResizeOption_Width" sFontClr="white" sFontSize="10" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="label" sFunctionName="sfLabel" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNDeZcEeKzaqmphUy48A" sType="NUMBER" sValue="10" sName="font-size"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNDuZcEeKzaqmphUy48A" sType="COLOR" sValue="white" sName="color"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oND-ZcEeKzaqmphUy48A" sType="NUMBER" sValue="940" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNEOZcEeKzaqmphUy48A" sType="NUMBER" sValue="420" sName="top"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_I1oNEeZcEeKzaqmphUy48A" sType="NUMBER" sValue="250" sName="width"/>
-      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_I1oNEuZcEeKzaqmphUy48A" sName="text" sValue="Contraseña (2 veces):"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_SQbtqubrEeKu445jK59Q9Q" sWidth="130.0" sHeight="40.0" sBgImage="" sResolution="720" sId="lPass1R" sCaption="Contraseña (2 veces):" sResizeOpt="ResizeOption_Width" sFontClr="white" sFontSize="10" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="label" sFunctionName="sfLabel" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtq-brEeKu445jK59Q9Q" sType="NUMBER" sValue="10" sName="font-size"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtrObrEeKu445jK59Q9Q" sType="COLOR" sValue="white" sName="color"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtrebrEeKu445jK59Q9Q" sType="NUMBER" sValue="940" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtrubrEeKu445jK59Q9Q" sType="NUMBER" sValue="420" sName="top"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_SQbtr-brEeKu445jK59Q9Q" sType="NUMBER" sValue="250" sName="width"/>
+      <sParams xmi:type="tv.samsung.sdk:ParamStruct" xmi:id="_SQbtsObrEeKu445jK59Q9Q" sName="text" sValue="Contraseña (2 veces):"/>
     </sComponents>
   </tv.samsung.sdk:VisualScene>
   <notation:Diagram xmi:id="_79QgAeYeEeKkxchUAHGJLQ" type="VisualScene" element="_79QgAOYeEeKkxchUAHGJLQ" name="Registro.scene" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_I1fC8OZcEeKzaqmphUy48A" type="2001" element="_I1oM4uZcEeKzaqmphUy48A" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_I1fC8uZcEeKzaqmphUy48A" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1fC8-ZcEeKzaqmphUy48A" x="910" y="230" width="250" height="37"/>
+    <children xmi:type="notation:Shape" xmi:id="_SQR8cObrEeKu445jK59Q9Q" type="2001" element="_SQbtgObrEeKu445jK59Q9Q" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SQR8cubrEeKu445jK59Q9Q" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQR8c-brEeKu445jK59Q9Q" x="910" y="230" width="250" height="37"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_I1fC9OZcEeKzaqmphUy48A" type="2001" element="_I1oM6eZcEeKzaqmphUy48A" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_I1fC9uZcEeKzaqmphUy48A" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1fC9-ZcEeKzaqmphUy48A" x="910" y="330" width="250" height="37"/>
+    <children xmi:type="notation:Shape" xmi:id="_SQR8dObrEeKu445jK59Q9Q" type="2001" element="_SQbth-brEeKu445jK59Q9Q" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SQR8dubrEeKu445jK59Q9Q" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQR8d-brEeKu445jK59Q9Q" x="910" y="330" width="250" height="37"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_I1fC-OZcEeKzaqmphUy48A" type="2001" element="_I1oM8OZcEeKzaqmphUy48A" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_I1fC-uZcEeKzaqmphUy48A" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1fC--ZcEeKzaqmphUy48A" x="910" y="520" width="250" height="37"/>
+    <children xmi:type="notation:Shape" xmi:id="_SQR8eObrEeKu445jK59Q9Q" type="2001" element="_SQbtjubrEeKu445jK59Q9Q" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SQR8eubrEeKu445jK59Q9Q" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQR8e-brEeKu445jK59Q9Q" x="910" y="520" width="250" height="37"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_I1fC_OZcEeKzaqmphUy48A" type="2001" element="_I1oM9-ZcEeKzaqmphUy48A" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_I1fC_uZcEeKzaqmphUy48A" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1fC_-ZcEeKzaqmphUy48A" x="910" y="445" width="250" height="37"/>
+    <children xmi:type="notation:Shape" xmi:id="_SQbtcObrEeKu445jK59Q9Q" type="2001" element="_SQbtlebrEeKu445jK59Q9Q" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SQbtcubrEeKu445jK59Q9Q" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQbtc-brEeKu445jK59Q9Q" x="910" y="445" width="250" height="37"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_I1fDAOZcEeKzaqmphUy48A" type="2001" element="_I1oM_uZcEeKzaqmphUy48A" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_I1fDAuZcEeKzaqmphUy48A" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1fDA-ZcEeKzaqmphUy48A" x="940" y="210" width="250" height="40"/>
+    <children xmi:type="notation:Shape" xmi:id="_SQbtdObrEeKu445jK59Q9Q" type="2001" element="_SQbtnObrEeKu445jK59Q9Q" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SQbtdubrEeKu445jK59Q9Q" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQbtd-brEeKu445jK59Q9Q" x="940" y="210" width="250" height="40"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_I1fDBOZcEeKzaqmphUy48A" type="2001" element="_I1oNBeZcEeKzaqmphUy48A" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_I1fDBuZcEeKzaqmphUy48A" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1fDB-ZcEeKzaqmphUy48A" x="940" y="310" width="250" height="40"/>
+    <children xmi:type="notation:Shape" xmi:id="_SQbteObrEeKu445jK59Q9Q" type="2001" element="_SQbto-brEeKu445jK59Q9Q" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SQbteubrEeKu445jK59Q9Q" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQbte-brEeKu445jK59Q9Q" x="940" y="310" width="250" height="40"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_I1fDCOZcEeKzaqmphUy48A" type="2001" element="_I1oNDOZcEeKzaqmphUy48A" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_I1oM4OZcEeKzaqmphUy48A" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1oM4eZcEeKzaqmphUy48A" x="940" y="420" width="250" height="40"/>
+    <children xmi:type="notation:Shape" xmi:id="_SQbtfObrEeKu445jK59Q9Q" type="2001" element="_SQbtqubrEeKu445jK59Q9Q" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SQbtfubrEeKu445jK59Q9Q" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQbtf-brEeKu445jK59Q9Q" x="940" y="420" width="250" height="40"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_79QgAuYeEeKkxchUAHGJLQ"/>
   </notation:Diagram>
