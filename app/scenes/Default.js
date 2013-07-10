@@ -18,6 +18,10 @@ SceneDefault.prototype.initialize = function () {
 	
 	sf.service.PIG.show('tvsignal');
 	$("#categorias").hide();
+	
+	//Registramos el control de canal para evitar que el usuario lo manipule
+	sf.key.registerKey(sf.key.CH_UP);
+	sf.key.registerKey(sf.key.CH_DOWN);
       
       var proyects = new Usergrid.Collection({ 'client':client, 'type':'proyects' });
                   proyects.fetch(
@@ -58,24 +62,6 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 	// TODO : write an key event handler when this scene get focued
 	var proyect_load;
 	
-	var KEY_1 = 101;
-	var KEY_2 = 98;
-	var KEY_3 = 6;
-	var KEY_4 = 8;
-	var KEY_5 = 9;
-	var KEY_6 = 10;
-	var KEY_7 = 12;
-	var KEY_8 = 13;
-	var KEY_9 = 14;
-	var KEY_0 = 17;
-	
-	var RED = 108;
-	var GREEN = 20;
-	var YELLOW = 21;
-	var BLUE = 22;
-	
-	var RETURN = 88;
-	
 	switch (keyCode) {
 		case sf.key.LEFT:
 			break;
@@ -89,7 +75,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			//to get channel info
 			//channelInfo2API();
 			break;
-		case KEY_1:
+		case sf.key.N1:
 			if (selected_proyect == -1){
 			selected_proyect = 1;
 			proyect_load = {
@@ -100,7 +86,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_2:
+		case sf.key.N2:
 			if (selected_proyect == -1){
 			selected_proyect = 2;
 			proyect_load = {
@@ -112,7 +98,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_3:
+		case sf.key.N3:
 			if (selected_proyect == -1){
 			selected_proyect = 3;
 			proyect_load = {
@@ -124,7 +110,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_4:
+		case sf.key.N4:
 			if (selected_proyect == -1){
 			selected_proyect = 4;
 			proyect_load = {
@@ -136,7 +122,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_5:
+		case sf.key.N5:
 			if (selected_proyect == -1){
 			selected_proyect = 5;
 			proyect_load = {
@@ -148,7 +134,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_6:
+		case sf.key.N6:
 			if (selected_proyect == -1){
 			selected_proyect = 6;
 			proyect_load = {
@@ -160,7 +146,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_7:
+		case sf.key.N7:
 			if (selected_proyect == -1){
 			selected_proyect = 7;
 			proyect_load = {
@@ -172,7 +158,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_8:
+		case sf.key.N8:
 			if (selected_proyect == -1){
 			selected_proyect = 8;
 			proyect_load = {
@@ -184,7 +170,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_9:
+		case sf.key.N9:
 			if (selected_proyect == -1){
 			selected_proyect = 9;
 			proyect_load = {
@@ -196,7 +182,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			}
 			break;
 			
-		case KEY_0:
+		case sf.key.N0:
 			if (selected_proyect == -1){
 			selected_proyect = 0;
 			proyect_load = {
@@ -209,7 +195,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			break;
 			
 			
-		case RED:
+		case sf.key.RED:
 			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
@@ -229,18 +215,17 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    			//error('proyect not saved');
 			    		} else {
 			    			//success('proyect is saved');
-			    			$("#lista").show();
-					    	$("#categorias").hide();
+			    			alert('Pulsado rojo: Check In');
+
 			    		}
 			    	});
 			    }
 			});
 			
-			selected_proyect =-1;
 			}
 			break;
 			
-		case GREEN:
+		case sf.key.GREEN:
 			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
@@ -260,18 +245,16 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    			//error('proyect not saved');
 			    		} else {
 			    			//success('proyect is saved');
-			    			$("#lista").show();
-					    	$("#categorias").hide();
+			    			alert('Pulsado verde: Check In');
 			    		}
 			    	});
 			    }
 			});
 			
-			selected_proyect =-1;
 			}
 			break;
 			
-		case YELLOW:
+		case sf.key.YELLOW:
 			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
@@ -291,18 +274,16 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    			//error('proyect not saved');
 			    		} else {
 			    			//success('proyect is saved');
-			    			$("#lista").show();
-					    	$("#categorias").hide();
+			    			alert('Pulsado amarillo: Check In');
 			    		}
 			    	});
 			    }
 			});
 			
-			selected_proyect =-1;
 			}
 			break;
 			
-		case BLUE:
+		case sf.key.BLUE:
 			if (selected_proyect > -1){
 			proyect_load = {
 			    type:'proyects',
@@ -322,21 +303,42 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    			//error('proyect not saved');
 			    		} else {
 			    			//success('proyect is saved');
-			    			$("#lista").show();
-					    	$("#categorias").hide();
+			    			alert('Pulsado azul: Check In');
 			    		}
 			    	});
 			    }
 			});
 			
-			selected_proyect =-1;
 			}
 			break;
 			
-		case RETURN:
-			sf.scene.hide('Default');
+		case sf.key.RETURN:
+			event.preventDefault();
+			$("#lista").show();
+	    	$("#categorias").hide();
+	    	selected_proyect =-1;
+			break;
+		
+		case sf.key.CH_UP:
+			event.preventDefault();
+			break;
+		
+		case sf.key.CH_DOWN:
+			event.preventDefault();
+			break;
+			
+		case sf.key.TOOLS:
+			event.preventDefault();
+			client.logout();
+			sf.service.PIG.hide();
+			sf.scene.hide('Default');;
 			sf.scene.show('Login');
 			sf.scene.focus('Login');
+			break;
+		
+		case sf.key.EXIT:
+			event.preventDefault();
+			sf.core.exit(false);
 			break;
 			
 		default:

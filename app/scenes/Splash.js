@@ -99,6 +99,16 @@ SceneSplash.prototype.handleKeyDown = function (keyCode) {
 			break;
 		case sf.key.ENTER:
 			break;
+		case sf.key.RETURN:
+			event.preventDefault();
+			break;
+		case sf.key.TOOLS:
+			event.preventDefault();
+			break;
+		case sf.key.EXIT:
+			event.preventDefault();
+			sf.core.exit(false);
+			break;
 		default:
 			alert("handle default key event, key code(" + keyCode + ")");
 			break;

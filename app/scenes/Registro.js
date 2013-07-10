@@ -25,7 +25,7 @@ SceneRegistro.prototype.initialize = function () {
 		    if (text) {
 		    	username = text;
 		    	$('#mailR').sfTextInput('focus');
-		    	$('#mailR').sfTextInput('setKeypadPos', 150, 200);
+		    	$('#mailR').sfTextInput('setKeypadPos', 150, 170);
 		    }
 		    else {
 		    	//error
@@ -40,7 +40,7 @@ SceneRegistro.prototype.initialize = function () {
 		    if (text) {
 		    	mail = text;
 		    	$('#pass1R').sfTextInput('focus');
-		    	$('#pass1R').sfTextInput('setKeypadPos', 150, 200);
+		    	$('#pass1R').sfTextInput('setKeypadPos', 150, 170);
 		    }
 		    else {
 		    	//error
@@ -69,7 +69,7 @@ SceneRegistro.prototype.initialize = function () {
 		    if (text) {
 		    	password = text;
 		    	$('#pass2R').sfTextInput('focus');
-		    	$('#pass2R').sfTextInput('setKeypadPos', 150, 200);
+		    	$('#pass2R').sfTextInput('setKeypadPos', 150, 170);
 		    }
 		    else {
 		    	//error
@@ -122,19 +122,29 @@ SceneRegistro.prototype.handleKeyDown = function (keyCode) {
 			break;
 		case sf.key.RIGHT:
 			$('#userR').sfTextInput('focus');
-			$('#userR').sfTextInput('setKeypadPos', 150, 200);
+			$('#userR').sfTextInput('setKeypadPos', 150, 170);
 			break;
 		case sf.key.UP:
 			$('#userR').sfTextInput('focus');
-			$('#userR').sfTextInput('setKeypadPos', 150, 200);
+			$('#userR').sfTextInput('setKeypadPos', 150, 170);
 			break;
 		case sf.key.DOWN:
 			$('#userR').sfTextInput('focus');
-			$('#userR').sfTextInput('setKeypadPos', 150, 200);
+			$('#userR').sfTextInput('setKeypadPos', 150, 170);
 			break;
 		case sf.key.ENTER:
 			$('#userR').sfTextInput('focus');
-			$('#userR').sfTextInput('setKeypadPos', 150, 200);
+			$('#userR').sfTextInput('setKeypadPos', 150, 170);
+			break;
+		case sf.key.RETURN:
+			event.preventDefault();
+			break;
+		case sf.key.TOOLS:
+			event.preventDefault();
+			break;
+		case sf.key.EXIT:
+			event.preventDefault();
+			sf.core.exit(false);
 			break;
 		default:
 			alert("handle default key event, key code(" + keyCode + ")");

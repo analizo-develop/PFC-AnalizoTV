@@ -36,7 +36,7 @@ SceneLogin.prototype.initialize = function () {
 	        if (text) {
 	        	username = text;
 	        	$('#password').sfTextInput('focus');
-	        	$('#password').sfTextInput('setKeypadPos', 400, 200);
+	        	$('#password').sfTextInput('setKeypadPos', 400, 170);
 	        }
 	        else {
 	        	//error
@@ -79,8 +79,8 @@ SceneLogin.prototype.handleKeyDown = function (keyCode) {
 	// TODO : write an key event handler when this scene get focued
 	switch (keyCode) {
 		case sf.key.LEFT:
-			('#user').sfTextInput('focus');
-			$('#user').sfTextInput('setKeypadPos', 400, 200);
+			$('#user').sfTextInput('focus');
+			$('#user').sfTextInput('setKeypadPos', 400, 170);
 			break;
 		case sf.key.RIGHT:
 			sf.scene.hide('Login');
@@ -89,15 +89,25 @@ SceneLogin.prototype.handleKeyDown = function (keyCode) {
 			break;
 		case sf.key.UP:
 			$('#user').sfTextInput('focus');
-			$('#user').sfTextInput('setKeypadPos', 400, 200);
+			$('#user').sfTextInput('setKeypadPos', 400, 170);
 			break;
 		case sf.key.DOWN:
-			('#user').sfTextInput('focus');
-			$('#user').sfTextInput('setKeypadPos', 400, 200);
+			$('#user').sfTextInput('focus');
+			$('#user').sfTextInput('setKeypadPos', 400, 170);
 			break;
 		case sf.key.ENTER:
 			$('#user').sfTextInput('focus');
-			$('#user').sfTextInput('setKeypadPos', 400, 200);
+			$('#user').sfTextInput('setKeypadPos', 400, 170);
+			break;
+		case sf.key.RETURN:
+			event.preventDefault();
+			break;
+		case sf.key.TOOLS:
+			event.preventDefault();
+			break;
+		case sf.key.EXIT:
+			event.preventDefault();
+			sf.core.exit(false);
 			break;
 		default:
 			alert("handle default key event, key code(" + keyCode + ")");
