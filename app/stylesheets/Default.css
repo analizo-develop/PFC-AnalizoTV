@@ -7,19 +7,35 @@
 	background-color: transparent;
 	background-image : url('');
 }
-#proyects {
-    width: 300px;
-    margin: 0 auto;
-    background: #fff;
-    min-height: 100%;
-    padding-top: 10px;
-    border-left: 1px dotted #ccc;
-    border-right: 1px dotted #ccc;
-    float: right;
+
+#SceneDefault #blackback{
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 1280px;
+	height : 720px;
+	background-color: #000;
+	opacity: 0.8;
+	z-index: -1;
+}
+
+#SceneDefault #barra{
+	position : absolute;
+	left : 0px;
+	top : 690px;
+	height: 30px;
+	width: 100%;
+	background-color: black;
+}
+
+#SceneDefault #proyects {
+    width: 100%;
+    height: 100%;
+    background-color : transparent;
     z-index: 97;
 }
 
-#tvsignal
+#SceneDefault #tvsignal
 {
 	position : fixed;
 	float:center;
@@ -28,30 +44,230 @@
 	width: 1280px;
 	height: 720px;
 	background-color: white;
-	z-index: -1;
+	z-index: -2;
 }
 
-#SceneDefault #info2{
-	position : absolute;
-	font-size : 10pt;
-	color : #000000;
-	left : 80px;
-	top : 130px;
-	width : 711px;
+#SceneDefault #lista{
+	z-index : 97;
+	width: 100%;
+	height: 100%;
+	border: none;
 }
-#SceneDefault #info{
-	position : absolute;
-	font-size : 10pt;
-	color : #000000;
-	left : 140px;
-	top : 144px;
-	width : 130px;
+
+#SceneDefault #listaProx{
+	z-index : 97;
+	width: 100%;
+	height: 100%;
+	border: none;
+
 }
-#SceneDefault #svecLabel_5i7pmu3edgpr6{
-	position : absolute;
-	font-size : 10pt;
-	color : #000000;
-	left : 20px;
-	top : 229px;
-	width : 531px;
+
+#SceneDefault #colours{
+	z-index : 97;
+	height: 30%;
+	width: 100%;
+	border: none;
+	border-collapse:collapse;
 }
+
+#SceneDefault #programa1E, #programa2E, #programa3E, #programa4E, #programa5E, #programa6E, #programa7E, #programa8E, #programa9E, #programa0E, 
+#programa1P, #programa2P, #programa3P, #programa4P, #programa5P, #programa6P, #programa7P, #programa8P, #programa9P, #programa0P{
+	z-index : 97;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	border: none;
+}
+
+#SceneDefault #h2emi{
+	color: #83b321;
+	font-family: Bitter, arial, sans-serif;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+#SceneDefault #ayuda{
+	color: white;
+	float: right;
+	margin-top: 10px;
+	margin-right: 20px;
+	font: 0.6em Bitter, arial, sans-serif;
+}
+
+#SceneDefault #h2prox{
+	color: white;
+	font-family: Bitter, arial, sans-serif;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+#SceneDefault #titulo{
+	position: relative;
+	color: #ffffff;
+	font-family: Bitter, arial, sans-serif;
+	width: 100%;
+	background-color: #83b321;
+	text-align:center;
+	float: left;
+}
+#SceneDefault #fix{
+	height: 80%;
+}
+
+#SceneDefault #hora{
+	position: relative;
+	color: #ffffff;
+	font-family: Bitter, arial, sans-serif;
+	width: 100%;
+	background-color: #83b321;
+	text-align:center;
+}
+#SceneDefault #descripcion{
+	position: relative;
+	color: #ffffff;
+	font-family: Bitter, arial, sans-serif;
+	width: 100%;
+	background-color: #83b321;
+	text-align:center;
+}
+
+#SceneDefault #emision{
+height: 42%;	
+}
+
+#SceneDefault #proximamente{
+height: 42%;	
+}
+
+#SceneDefault #emision td{
+	width: 100%;
+	/*Hay que generarlo dinamicamente dependiendo del num. de proyectos*/
+}
+
+#SceneDefault #proximamente td{
+	width: 50%;
+	/*Hay que generarlo dinamicamente dependiendo del num. de proyectos*/
+}
+
+
+#SceneDefault #emision #programa1E #titulo:after {
+    content: "1";
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #c13d3d;
+    font: 8em arial, sans-serif;
+    top: 15px;
+    left: 0px;
+    
+}
+  
+  #SceneDefault #emision #programa2E #titulo:after {
+      content: "2";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+    }
+    
+  #SceneDefault #emision #programa3E #titulo:after {
+        content: "3";
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        color: #c13d3d;
+        font: 8em arial, sans-serif;
+        top: 15px;
+        left: 0px;
+      }
+  
+  #SceneDefault #emision #programa4E #titulo:after {
+      content: "4";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+      
+  }
+  
+  /* Screen de Categorias */
+  
+  #SceneDefault #alerta{
+  	position : absolute;
+  	left : 1000px;
+  	top : 30px;
+  	height: 70px;
+  	width: 250px;
+  	background-color: black;
+  	text-align: center;
+  	background-color: #83b321;
+  	color: #ffffff;
+  	font: small-caps 2em Bitter, arial, sans-serif;
+  	padding-top: 20px;
+  	opacity: 0.95;
+  }
+  
+  #SceneDefault #categorias{
+  	z-index : 97;
+  	height: 15%;
+  	width: 100%;
+  	border: none;
+  	border-collapse:collapse;
+  	opacity: 0.95;
+  }
+  
+  #SceneDefault #fixCategorias{
+  	z-index : 97;
+  	height: 85%;
+  	width: 100%;
+  }
+  
+  #SceneDefault #redC{
+  	z-index : 97;
+  	background-color : #c13d3d;
+  	width: 25%;
+  	height: 100%;
+  	text-align: center;
+  	vertical-align: top;
+  	font: small-caps 1.6em Bitter, arial, sans-serif;	
+  }
+  
+  #SceneDefault #blueC{
+  	z-index : 97;
+  	background-color : #7ebec8;
+  	width: 25%;
+  	height: 100%;
+  	text-align: center;
+  	vertical-align: top;
+  	font: small-caps 1.6em Bitter, arial, sans-serif;	
+  }
+  
+  #SceneDefault #yellowC{
+  	z-index : 97;
+  	background-color : #e0ed14;
+  	width: 25%;
+  	height: 100%;
+  	text-align: center;
+  	vertical-align: top;
+  	font: small-caps 1.6em Bitter, arial, sans-serif;
+  }
+  
+  #SceneDefault #greenC{
+  	z-index : 97;
+  	background-color : #83b321;
+  	width: 25%;
+  	height: 100%;
+  	text-align: center;
+  	vertical-align: top;
+  	font: small-caps 1.6em Bitter, arial, sans-serif;
+  }
+  
+  
+

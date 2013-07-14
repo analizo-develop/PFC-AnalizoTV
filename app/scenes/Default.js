@@ -18,22 +18,14 @@ SceneDefault.prototype.initialize = function () {
 	
 	sf.service.PIG.show('tvsignal');
 	$("#categorias").hide();
+	$("#alerta").hide();
+	$("#fixCategorias").hide();
 	
 	//Registramos el control de canal para evitar que el usuario lo manipule
 	sf.key.registerKey(sf.key.CH_UP);
 	sf.key.registerKey(sf.key.CH_DOWN);
       
-      var proyects = new Usergrid.Collection({ 'client':client, 'type':'proyects' });
-                  proyects.fetch(
-                      function() { // Success
-                          while(proyects.hasNextEntity()) {
-                              var proyect = proyects.getNextEntity();
-                              $("#lista").append("<li id="+proyect.get('name')+"> Pulsa "+proyect.get('name')+" para: " + proyect.get('program') + "</li>");
-                              }
-                      }, function() { // Failure
-                          alert('read failed');
-                      }
-                  );
+    doStart();
 
 };
 
@@ -82,6 +74,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    type:'proyects',
 			    name:'1'
 			};
+			
 			loadProgram(proyect_load);
 			}
 			break;
@@ -202,25 +195,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			client.getEntity(proyect_load, function (err, proyect) {
-			    if (err){
-
-			    } else {
-			    	
-			    	var results = proyect.get('cat1_results')+1;
-			    	proyect.set("cat1_results",results);
-			    	
-			    	proyect.save(function(err){
-			    		if (err){
-			    			//error('proyect not saved');
-			    		} else {
-			    			//success('proyect is saved');
-			    			alert('Pulsado rojo: Check In');
-
-			    		}
-			    	});
-			    }
-			});
+			doCheckIn(proyect_load, "cat1_results");
 			
 			}
 			break;
@@ -232,24 +207,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			client.getEntity(proyect_load, function (err, proyect) {
-			    if (err){
-
-			    } else {
-			    	
-			    	var results = proyect.get('cat2_results')+1;
-			    	proyect.set("cat2_results",results);
-			    	
-			    	proyect.save(function(err){
-			    		if (err){
-			    			//error('proyect not saved');
-			    		} else {
-			    			//success('proyect is saved');
-			    			alert('Pulsado verde: Check In');
-			    		}
-			    	});
-			    }
-			});
+			doCheckIn(proyect_load, "cat2_results");
 			
 			}
 			break;
@@ -261,24 +219,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			client.getEntity(proyect_load, function (err, proyect) {
-			    if (err){
-
-			    } else {
-			    	
-			    	var results = proyect.get('cat3_results')+1;
-			    	proyect.set("cat3_results",results);
-			    	
-			    	proyect.save(function(err){
-			    		if (err){
-			    			//error('proyect not saved');
-			    		} else {
-			    			//success('proyect is saved');
-			    			alert('Pulsado amarillo: Check In');
-			    		}
-			    	});
-			    }
-			});
+			doCheckIn(proyect_load, "cat3_results");
 			
 			}
 			break;
@@ -290,32 +231,17 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			client.getEntity(proyect_load, function (err, proyect) {
-			    if (err){
-
-			    } else {
-			    	
-			    	var results = proyect.get('cat4_results')+1;
-			    	proyect.set("cat4_results",results);
-			    	
-			    	proyect.save(function(err){
-			    		if (err){
-			    			//error('proyect not saved');
-			    		} else {
-			    			//success('proyect is saved');
-			    			alert('Pulsado azul: Check In');
-			    		}
-			    	});
-			    }
-			});
+			doCheckIn(proyect_load, "cat4_results");
 			
 			}
 			break;
 			
 		case sf.key.RETURN:
 			event.preventDefault();
-			$("#lista").show();
-	    	$("#categorias").hide();
+			$("#proyects").show();
+			$("#blackback").show();
+			$("#categorias").hide();
+			$("#fixCategorias").hide();
 	    	selected_proyect =-1;
 			break;
 		
@@ -351,15 +277,22 @@ function loadCategories(proyect_load){
 	
 	client.getEntity(proyect_load, function (err, proyect) {
 	    if (err){
+	    	alert("categories not loaded");
 
 	    } else {
-	    	$("#categorias").empty();
-	    	$("#categorias").append("<li> Pulsa Rojo para: " +proyect.get('cat1') + "</li>");
-	    	$("#categorias").append("<li> Pulsa Verde para: " +proyect.get('cat2') + "</li>");
-	    	$("#categorias").append("<li> Pulsa Amarillo para: " +proyect.get('cat3') + "</li>");
-	    	$("#categorias").append("<li> Pulsa Azul para: " +proyect.get('cat4') + "</li>");
-	        $("#lista").hide();
-	    	$("#categorias").show();
+	    	$("#redC").empty();
+	    	$("#greenC").empty();
+	    	$("#yellowC").empty();
+	    	$("#blueC").empty();
+	    	$("#redC").append(proyect.get('cat1'));
+	    	$("#greenC").append(proyect.get('cat2'));
+	    	$("#yellowC").append(proyect.get('cat3'));
+	    	$("#blueC").append(proyect.get('cat4'));
+	    	
+	        $("#proyects").hide();
+	        $("#blackback").hide();
+	        $("#categorias").show();
+	        $("#fixCategorias").show();
 	    }
 	});
 	
@@ -441,12 +374,6 @@ function loadProgram(proyect_load){
 	 							{	
 	 								loadCategories(proyect_load);
 	 								tuneChannel(proyect_load);
-	 								
-	 								refreshInterval = setInterval(isOnChannel, 5 * 1000);
-	 					            isOnChannel();
-	 					            //On return will be
-	 					            //clearInterval(refreshInterval);
-	 					            //refreshInterval = 0;
 	 					            
 	 							} else{selected_proyect =-1;}
 	 						} else{selected_proyect =-1;}
@@ -456,6 +383,33 @@ function loadProgram(proyect_load){
 	 		}
 	 	});
 	 }
+	 
+function doCheckIn(proyect_load, category){
+
+	client.getEntity(proyect_load, function (err, proyect) {
+			    if (err){
+
+			    } else {
+			    	
+			    	var results = proyect.get(category)+1;
+			    	proyect.set(category,results);
+			    	
+			    	proyect.save(function(err){
+			    		if (err){
+			    			//error('proyect not saved');
+			    		} else {
+			    			//success('proyect is saved');
+			    			alert('Checked In');
+			    			$("#alerta").fadeIn();
+			    			setTimeout(
+			    				function() 
+			    				{$("#alerta").fadeOut();}, 1000);
+			    			
+			    		}
+			    	});
+			    }
+			});
+}
 
 
 function channelInfo2API() {
@@ -492,8 +446,98 @@ var channelInfo = {
 		});   
 }
 
-function isOnChannel(){
-	//Comprobar el canal sintonizado
+function doStart() {
+    var inTimeProyects = 0;
+    var outTimeProyects = 0;
+    var comprobar = -1;
+      
+    var proyects = new Usergrid.Collection({ 'client':client, 'type':'proyects' });
+                proyects.fetch(
+                    function() { // Success
+                    
+                    $("#firstE").empty();
+                    $("#firstP").empty();
+                    $("#secondE").empty();
+                    $("#secondP").empty();
+                    
+                    now=new Date();
+                    var weekday=new Array(7);
+                    weekday[0]="Sunday";
+                    weekday[1]="Monday";
+                    weekday[2]="Tuesday";
+                    weekday[3]="Wednesday";
+                    weekday[4]="Thursday";
+                    weekday[5]="Friday";
+                    weekday[6]="Saturday";
+                    
+                    var now_day = weekday[now.getDay()];
+                    
+                    
+                    while(proyects.hasNextEntity()) {
+                    var proyect = proyects.getNextEntity();
+                    
+                    var proyect_day = proyect.get(now_day);  
+                    if(proyect_day){ 
+                    	
+                    	if(now.getHours() >= proyect.get('HoraInicio'))
+                    	{
+                    		if(now.getMinutes() >= proyect.get('MinutoInicio'))
+                    		{
+                    			if(now.getHours() <= proyect.get('HoraFin'))
+                    			{
+                    				if(now.getMinutes() <= proyect.get('MinutoFin'))
+                    				{	
+                    					comprobar = 1;
+                    					 
+                    				} else{comprobar = 0;}
+                    			} else{comprobar = 0;}
+                    		} else{comprobar = 0;}
+                    	} else{comprobar = 0;}
+                    } else{comprobar = 0;}
+                    
+                    if(comprobar){
+                        inTimeProyects = inTimeProyects +1;
+                                                  
+                           	if (inTimeProyects > 5){
+                           	//second
+                           	$("#secondE").append("<td><div id='programa"+proyect.get('name')+"E'><div id='titulo'>"+proyect.get('program')+"</div></div></td>");
+                           	
+                           	$("#programa"+proyect.get('name')+"E").css('background-image','url('+proyect.get("Imagen")+')');
+                           	}
+                           	else{
+                            $("#firstE").append("<td><div id='programa"+proyect.get('name')+"E'><div id='titulo'>"+proyect.get('program')+"</div></div></td>");
+                            
+                            $("#programa"+proyect.get('name')+"E").css('background-image','url('+proyect.get("Imagen")+')');
+                                                    
+                            $("#emision td").css('width', 100/inTimeProyects+'%');
+                            }
+                            
+                            }
+                      else {
+                      		outTimeProyects =outTimeProyects +1;
+                      		
+                      		if (outTimeProyects > 5){
+                      		//second
+                      		$("#secondP").append("<td><div id='programa"+proyect.get('name')+"P'><div id='titulo'>"+proyect.get('program')+"</div><div id='fix'></div><div id='hora'>"+proyect.get('HoraInicio')+"."+proyect.get('MinutoInicio')+"h</div></div></td>");
+                      		
+                      		$("#programa"+proyect.get('name')+"P").css('background-image','url('+proyect.get("Imagen")+')');
+                      		}
+                      		else{
+                      		$("#firstP").append("<td><div id='programa"+proyect.get('name')+"P'><div id='titulo'>"+proyect.get('program')+"</div><div id='fix'></div><div id='hora'>"+proyect.get('HoraInicio')+"."+proyect.get('MinutoInicio')+"h</div></div></td>");
+                      		
+                      		$("#programa"+proyect.get('name')+"P").css('background-image','url('+proyect.get("Imagen")+')');
+                      		
+                      		$("#proximamente td").css('width', 100/inTimeProyects+'%');
+                      		
+                      		}
+                      	}
+                            
+                            }
+                    }, function() { // Failure
+                        alert('read failed');
+                    }
+                );
+    
 }
 
 function successCB() {

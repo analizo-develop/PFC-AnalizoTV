@@ -61,7 +61,7 @@ SceneSplash.prototype.initialize = function () {
 						sf.scene.focus('Login');
 						
 					}
-			  }, 5000);
+			  }, 7000);
 	
 };
 
