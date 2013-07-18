@@ -5,6 +5,7 @@ var channel;
 var program;
 var refreshInterval;
 var now;
+var userName;
 
 function SceneDefault() {
 
@@ -15,6 +16,16 @@ SceneDefault.prototype.initialize = function () {
 	// this function will be called only once when the scene manager show this scene first time
 	// initialize the scene controls and styles, and initialize your variables here
 	// scene HTML and CSS will be loaded before this function is called
+	
+	client.getLoggedInUser(function(err, data, user) {
+		if(err) {
+			alert('could not get logged in user');
+			
+		} else {
+			userName = user.get('username');
+		}
+	
+	});
 
       
     doStart();
@@ -395,28 +406,68 @@ function loadProgram(proyect_load){
 function doCheckIn(proyect_load, category){
 	$("#alerta").fadeIn();
 	
-	client.getEntity(proyect_load, function (err, proyect) {
-			    if (err){
+	  client.getEntity(proyect_load, function(err, proyecto){
+	  		if (err){
+	  			
+	  		} else {
+	  			//aqui
+	  			var resultados = proyecto.get('Resultados');
+	  			
+	  			var options = {
+	  					type:resultados
+	  				}
+	  			
+	  				client.createCollection(options, function (err, checkin) {
+	  					if (err) {
+	  						error('could not make collection');
+	  					} else {
+	  			
+	  						//success('new Collection created');
+	  			  			now=new Date();
+	  						//create a new dog and add it to the collection
+	  						var options = {
+	  							name:now.toString()+'-'+proyecto.get('name')+'-'+userName,
+	  							categoria:category,
+	  							proyecto:proyecto.get('name'),
+	  							hora:now.getHours(),
+	  							minuto:now.getMinutes(),
+	  							segundo:now.getSeconds(),
+	  							mes:now.getMonth(),
+	  							año:now.getFullYear(),
+	  							dia:now.getDate(),
+	  							diaSemana:now.getDay(),
+	  							fecha:now.toString(),
+	  							usuario:userName
+	  						}
+	  						//just pass the options to the addEntity method
+	  						//to the collection and it is saved automatically
+	  						checkin.addEntity(options, function(err, last, data) {
+	  							if (err) {
+	  								error('extra dog not saved or added to collection');
+	  							} else {
+	  								var results = proyecto.get('cat'+category+'_results')+1;
+	  								proyecto.set('cat'+category+'_results',results);
+	  								proyecto.save(function(err){
+	  									if (err){
+	  										//error('proyect not saved');
+	  									} else {
+	  										//success('proyect is saved');
+	  										alert('Checked In');
+	  						    			setTimeout(
+	  						    				function() 
+	  						    				{$("#alerta").fadeOut();}, 1000);
+	  										
+	  									}
+	  								});
+	  								
+	  							}
+	  						});
+	  					}
+	  				});
+	  				
+	  		}
+	  	});
 
-			    } else {
-			    	
-			    	var results = proyect.get('cat'+category+'_results')+1;
-			    	proyect.set('cat'+category+'_results',results);
-			    	
-			    	proyect.save(function(err){
-			    		if (err){
-			    			//error('proyect not saved');
-			    		} else {
-			    			//success('proyect is saved');
-			    			alert('Checked In');
-			    			setTimeout(
-			    				function() 
-			    				{$("#alerta").fadeOut();}, 1000);
-			    			
-			    		}
-			    	});
-			    }
-			});
 }
 
 
