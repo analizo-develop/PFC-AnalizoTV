@@ -10,6 +10,21 @@
 	display:inline-block;
 }
 
+#SceneRegistro #errorR{
+	position : absolute;
+	left : 440px;
+	top : 260px;
+	width: 400px;
+	background-color: black;
+	text-align: center;
+	background-color: #c13d3d;
+	color: #ffffff;
+	font: small-caps 2em Bitter, arial, sans-serif;
+	padding-top: 20px;
+	opacity: 0.95;
+	padding-bottom: 0.8em;
+}
+
 #SceneRegistro #body_registro{
 	width : 90%;
 	height : 100%;

@@ -15,15 +15,7 @@ SceneDefault.prototype.initialize = function () {
 	// this function will be called only once when the scene manager show this scene first time
 	// initialize the scene controls and styles, and initialize your variables here
 	// scene HTML and CSS will be loaded before this function is called
-	
-	sf.service.PIG.show('tvsignal');
-	$("#categorias").hide();
-	$("#alerta").hide();
-	$("#fixCategorias").hide();
-	
-	//Registramos el control de canal para evitar que el usuario lo manipule
-	sf.key.registerKey(sf.key.CH_UP);
-	sf.key.registerKey(sf.key.CH_DOWN);
+
       
     doStart();
 
@@ -42,6 +34,18 @@ SceneDefault.prototype.handleHide = function () {
 SceneDefault.prototype.handleFocus = function () {
 	alert("SceneDefault.handleFocus()");
 	// this function will be called when the scene manager focus this scene
+	
+	sf.service.PIG.show('tvsignal');
+	$("#categorias").hide();
+	$("#alerta").hide();
+	$("#fixCategorias").hide();
+	$('#errorD').hide();
+	$("#proximamente").hide();
+	$("#descripcionP").hide();
+	
+	//Registramos el control de canal para evitar que el usuario lo manipule
+	sf.key.registerKey(sf.key.CH_UP);
+	sf.key.registerKey(sf.key.CH_DOWN);
 };
 
 SceneDefault.prototype.handleBlur = function () {
@@ -195,7 +199,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			doCheckIn(proyect_load, "cat1_results");
+			doCheckIn(proyect_load, 1);
 			
 			}
 			break;
@@ -207,7 +211,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			doCheckIn(proyect_load, "cat2_results");
+			doCheckIn(proyect_load, 2);
 			
 			}
 			break;
@@ -219,7 +223,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			doCheckIn(proyect_load, "cat3_results");
+			doCheckIn(proyect_load, 3);
 			
 			}
 			break;
@@ -231,7 +235,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			    name:selected_proyect
 			};
 			
-			doCheckIn(proyect_load, "cat4_results");
+			doCheckIn(proyect_load, 4);
 			
 			}
 			break;
@@ -242,6 +246,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			$("#blackback").show();
 			$("#categorias").hide();
 			$("#fixCategorias").hide();
+			$("#descripcionP").hide();
 	    	selected_proyect =-1;
 			break;
 		
@@ -288,11 +293,13 @@ function loadCategories(proyect_load){
 	    	$("#greenC").append(proyect.get('cat2'));
 	    	$("#yellowC").append(proyect.get('cat3'));
 	    	$("#blueC").append(proyect.get('cat4'));
+	    	$("#descripcionP").append(proyect.get('Descripcion'));
 	    	
 	        $("#proyects").hide();
 	        $("#blackback").hide();
 	        $("#categorias").show();
 	        $("#fixCategorias").show();
+	        $("#descripcionP").show();
 	    }
 	});
 	
@@ -385,14 +392,15 @@ function loadProgram(proyect_load){
 	 }
 	 
 function doCheckIn(proyect_load, category){
-
+	$("#alerta").fadeIn();
+	
 	client.getEntity(proyect_load, function (err, proyect) {
 			    if (err){
 
 			    } else {
 			    	
-			    	var results = proyect.get(category)+1;
-			    	proyect.set(category,results);
+			    	var results = proyect.get('cat'+category+'_results')+1;
+			    	proyect.set('cat'+category+'_results',results);
 			    	
 			    	proyect.save(function(err){
 			    		if (err){
@@ -400,7 +408,6 @@ function doCheckIn(proyect_load, category){
 			    		} else {
 			    			//success('proyect is saved');
 			    			alert('Checked In');
-			    			$("#alerta").fadeIn();
 			    			setTimeout(
 			    				function() 
 			    				{$("#alerta").fadeOut();}, 1000);
@@ -470,6 +477,15 @@ function doStart() {
                     weekday[5]="Friday";
                     weekday[6]="Saturday";
                     
+                    var weekday_sp=new Array(7);
+                    weekday_sp[0]="Domingo";
+                    weekday_sp[1]="Lunes";
+                    weekday_sp[2]="Martes";
+                    weekday_sp[3]="Miércoles";
+                    weekday_sp[4]="Jueves";
+                    weekday_sp[5]="Viernes";
+                    weekday_sp[6]="Sábado";
+                    
                     var now_day = weekday[now.getDay()];
                     
                     
@@ -477,6 +493,15 @@ function doStart() {
                     var proyect = proyects.getNextEntity();
                     
                     var proyect_day = proyect.get(now_day);  
+                    
+                    nextDay = now.getDay();
+                    while(!proyect.get(weekday[nextDay]))
+                    {
+                    	nextDay=nextDay+1;
+                    	if(nextDay==7){nextDay=0;}
+                    	
+                    }
+                    
                     if(proyect_day){ 
                     	
                     	if(now.getHours() >= proyect.get('HoraInicio'))
@@ -523,20 +548,44 @@ function doStart() {
                       		$("#programa"+proyect.get('name')+"P").css('background-image','url('+proyect.get("Imagen")+')');
                       		}
                       		else{
-                      		$("#firstP").append("<td><div id='programa"+proyect.get('name')+"P'><div id='titulo'>"+proyect.get('program')+"</div><div id='fix'></div><div id='hora'>"+proyect.get('HoraInicio')+"."+proyect.get('MinutoInicio')+"h</div></div></td>");
+                      		$("#firstP").append("<td><div id='programa"+proyect.get('name')+"P'><div id='titulo'>"+proyect.get('program')+"</div><div id='fix'></div><div id='hora'>"+weekday_sp[nextDay]+", "+proyect.get('HoraInicio')+"."+proyect.get('MinutoInicio')+"h</div></div></td>");
                       		
                       		$("#programa"+proyect.get('name')+"P").css('background-image','url('+proyect.get("Imagen")+')');
                       		
-                      		$("#proximamente td").css('width', 100/inTimeProyects+'%');
+                      		//$("#proximamente td").css('width', 100/inTimeProyects+'%');
                       		
                       		}
                       	}
+                    
+                   
                             
                             }
+                    
+                    for(var i = outTimeProyects;i<5;i++)
+                    {
+                    	alert(i);
+                  		$("#firstP").append("<td>&nbsp;</td>");
+
+                    }
+                    
+                    if(inTimeProyects == 0)
+                    {
+                    	$("#emision").append("<h2 id='NoProg'>No hay programas en emisión en este momento</h2>");
+                    	$("#lista").hide();
+                    	$("#h2emi").hide();
+                    }
+                    if(outTimeProyects > 0)
+                    {
+                    	$("#proximamente").show();
+                    }
+                    
+                    
                     }, function() { // Failure
                         alert('read failed');
                     }
                 );
+                
+                
     
 }
 

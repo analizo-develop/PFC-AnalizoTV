@@ -8,6 +8,31 @@
 	background-image : url('');
 }
 
+#SceneDefault #NoProg{
+	z-index : 97;
+	height: 22%;
+	width: 100%;
+	color: #c13d3d;
+	font-family: Bitter, arial, sans-serif;
+	margin-top: 10%;
+	text-align: center;
+}
+
+#SceneDefault #errorD{
+	position : absolute;
+	left : 440px;
+	top : 260px;
+	width: 400px;
+	background-color: black;
+	text-align: center;
+	background-color: #c13d3d;
+	color: #ffffff;
+	font: small-caps 2em Bitter, arial, sans-serif;
+	padding-top: 20px;
+	opacity: 0.95;
+	padding-bottom: 0.8em;
+}
+
 #SceneDefault #blackback{
 	position : absolute;
 	left : 0px;
@@ -26,6 +51,7 @@
 	height: 30px;
 	width: 100%;
 	background-color: black;
+	color: #ffffff;
 }
 
 #SceneDefault #proyects {
@@ -120,17 +146,10 @@
 	color: #ffffff;
 	font-family: Bitter, arial, sans-serif;
 	width: 100%;
-	background-color: #83b321;
+	background-color: #20211f;
 	text-align:center;
 }
-#SceneDefault #descripcion{
-	position: relative;
-	color: #ffffff;
-	font-family: Bitter, arial, sans-serif;
-	width: 100%;
-	background-color: #83b321;
-	text-align:center;
-}
+
 
 #SceneDefault #emision{
 height: 42%;	
@@ -146,7 +165,7 @@ height: 42%;
 }
 
 #SceneDefault #proximamente td{
-	width: 50%;
+	width: 20%;
 	/*Hay que generarlo dinamicamente dependiendo del num. de proyectos*/
 }
 
@@ -160,7 +179,7 @@ height: 42%;
     font: 8em arial, sans-serif;
     top: 15px;
     left: 0px;
-    
+	text-shadow: 0 0 15px #000000;
 }
   
   #SceneDefault #emision #programa2E #titulo:after {
@@ -172,6 +191,8 @@ height: 42%;
       font: 8em arial, sans-serif;
       top: 15px;
       left: 0px;
+      text-shadow: 0 0 15px #000000;
+     
     }
     
   #SceneDefault #emision #programa3E #titulo:after {
@@ -183,6 +204,7 @@ height: 42%;
         font: 8em arial, sans-serif;
         top: 15px;
         left: 0px;
+        text-shadow: 0 0 15px #000000;
       }
   
   #SceneDefault #emision #programa4E #titulo:after {
@@ -194,10 +216,96 @@ height: 42%;
       font: 8em arial, sans-serif;
       top: 15px;
       left: 0px;
-      
+      text-shadow: 0 0 15px #000000;
   }
   
+  #SceneDefault #emision #programa5E #titulo:after {
+      content: "5";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+      text-shadow: 0 0 15px #000000;
+  }
+  
+  #SceneDefault #emision #programa6E #titulo:after {
+      content: "6";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+      text-shadow: 0 0 15px #000000;
+  }
+  
+  #SceneDefault #emision #programa7E #titulo:after {
+      content: "7";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+      text-shadow: 0 0 15px #000000;
+  }
+  
+  #SceneDefault #emision #programa8E #titulo:after {
+      content: "8";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+      text-shadow: 0 0 15px #000000;
+  }
+  
+  #SceneDefault #emision #programa9E #titulo:after {
+      content: "9";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+      text-shadow: 0 0 15px #000000;
+  }
+  
+  #SceneDefault #emision #programa0E #titulo:after {
+      content: "0";
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      color: #c13d3d;
+      font: 8em arial, sans-serif;
+      top: 15px;
+      left: 0px;
+      text-shadow: 0 0 15px #000000;
+  }  
   /* Screen de Categorias */
+  
+  #SceneDefault #descripcionP{
+  position : absolute;
+  left : 0px;
+  top : 0px;
+  width: 100%;
+  background-color: #83b321;
+  color: #ffffff;
+  font: small-caps 1.2em Bitter, arial, sans-serif;
+  opacity: 0.95;
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  
+  }
   
   #SceneDefault #alerta{
   	position : absolute;
@@ -229,45 +337,61 @@ height: 42%;
   	width: 100%;
   }
   
-  #SceneDefault #redC{
-  	z-index : 97;
-  	background-color : #c13d3d;
-  	width: 25%;
-  	height: 100%;
-  	text-align: center;
-  	vertical-align: top;
-  	font: small-caps 1.6em Bitter, arial, sans-serif;	
-  }
-  
-  #SceneDefault #blueC{
-  	z-index : 97;
-  	background-color : #7ebec8;
-  	width: 25%;
-  	height: 100%;
-  	text-align: center;
-  	vertical-align: top;
-  	font: small-caps 1.6em Bitter, arial, sans-serif;	
-  }
-  
-  #SceneDefault #yellowC{
-  	z-index : 97;
-  	background-color : #e0ed14;
-  	width: 25%;
-  	height: 100%;
-  	text-align: center;
-  	vertical-align: top;
-  	font: small-caps 1.6em Bitter, arial, sans-serif;
-  }
-  
-  #SceneDefault #greenC{
-  	z-index : 97;
-  	background-color : #83b321;
-  	width: 25%;
-  	height: 100%;
-  	text-align: center;
-  	vertical-align: top;
-  	font: small-caps 1.6em Bitter, arial, sans-serif;
-  }
+ #SceneDefault #redC{
+ 	z-index : 97;
+ 	background-color : #c13d3d;
+ 	width: 25%;
+ 	height: 100%;
+ 	text-align: center;
+ 	vertical-align: top;
+ 	font: small-caps 1.6em Bitter, arial, sans-serif;	
+ 	background-image : url('../../images/A.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center top;
+ 	background-size: 83px;
+ }
+ 
+ #SceneDefault #blueC{
+ 	z-index : 97;
+ 	background-color : #7ebec8;
+ 	width: 25%;
+ 	height: 100%;
+ 	text-align: center;
+ 	vertical-align: top;
+ 	font: small-caps 1.6em Bitter, arial, sans-serif;	
+ 	background-image : url('../../images/D.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center top;
+ 	background-size: 83px;
+ }
+ 
+ #SceneDefault #yellowC{
+ 	z-index : 97;
+ 	background-color : #e0ed14;
+ 	width: 25%;
+ 	height: 100%;
+ 	text-align: center;
+ 	vertical-align: top;
+ 	font: small-caps 1.6em Bitter, arial, sans-serif;
+ 	background-image : url('../../images/C.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center top;
+ 	background-size: 83px;
+ }
+ 
+ #SceneDefault #greenC{
+ 	z-index : 97;
+ 	background-color : #83b321;
+ 	width: 25%;
+ 	height: 100%;
+ 	text-align: center;
+ 	vertical-align: top;
+ 	font: small-caps 1.6em Bitter, arial, sans-serif;
+ 	background-image : url('../../images/B.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center top;
+ 	background-size: 83px;
+ }
   
   
 

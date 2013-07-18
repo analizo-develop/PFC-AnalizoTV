@@ -67,6 +67,7 @@ SceneLogin.prototype.handleFocus = function () {
 	// this function will be called when the scene manager focus this scene
 	$('#user').sfTextInput('blur');
 	$('#password').sfTextInput('blur');
+	$('#errorL').hide();
 };
 
 SceneLogin.prototype.handleBlur = function () {
@@ -115,12 +116,23 @@ SceneLogin.prototype.handleKeyDown = function (keyCode) {
 	}
 };
 
+function showError(err)
+{
+		$("#errorL").append(err);
+		$("#errorL").css('background-color' , '#c13d3d');
+		$("#errorL").fadeIn();
+		setTimeout(
+			function() 
+			{$("#errorL").fadeOut();}, 2000);	
+}
+
 function loginUser() {
 	client.logout();
 	client.login(username, password,
 		function (err) {
 			if (err) {
 				alert('could not log user in');
+				showError(err);
 			} else {
 				alert('user has been logged in');
 
@@ -135,6 +147,7 @@ function loginUser() {
 				client.getLoggedInUser(function(err, data, user) {
 					if(err) {
 						alert('could not get logged in user');
+						showError(err);
 					} else {
 						alert('got logged in user');
 

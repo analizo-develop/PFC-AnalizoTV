@@ -104,6 +104,7 @@ SceneRegistro.prototype.handleFocus = function () {
 	$('#mailR').sfTextInput('blur');
 	$('#pass1R').sfTextInput('blur');
 	$('#pass2R').sfTextInput('blur');
+	$('#errorR').hide();
 };
 
 SceneRegistro.prototype.handleBlur = function () {
@@ -152,6 +153,18 @@ SceneRegistro.prototype.handleKeyDown = function (keyCode) {
 	}
 };
 
+function showError(err)
+{
+
+		$("#errorR").append(err);
+		$("#errorR").css('background-color' , '#c13d3d');
+		$("#errorR").fadeIn();
+		setTimeout(
+			function() 
+			{$("#errorR").fadeOut();}, 2000);
+	
+}
+
 function createUser() {
 
 	if(password==password2){
@@ -159,13 +172,24 @@ function createUser() {
 			function (err, username) {
 				if (err){
 					alert('user not created');
+					showError(err);
 				} else {
 					alert('user created');
+					
+					$("#errorR").append("usuario registrado");
+					$("#errorR").css('background-color' , '#83b321');
+					$("#errorR").fadeIn();
+					setTimeout(
+						function() 
+						{$("#errorR").fadeOut();}, 2000);
+						
 					sf.scene.show('Login');
 					sf.scene.focus('Login');
 					sf.scene.hide('Registro');
 				}
 			}
 		);
+	}else {
+		showError("Las contraseñas no coinciden");
 	}
 }
