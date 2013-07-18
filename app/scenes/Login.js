@@ -14,6 +14,8 @@ SceneLogin.prototype.initialize = function () {
 	// this function will be called only once when the scene manager show this scene first time
 	// initialize the scene controls and styles, and initialize your variables here
 	// scene HTML and CSS will be loaded before this function is called
+	$('#errorL').hide();
+	
 	$('#password').sfTextInput({
 		text:'',
 		maxlength:30,
@@ -118,6 +120,7 @@ SceneLogin.prototype.handleKeyDown = function (keyCode) {
 
 function showError(err)
 {
+		$("#errorL").empty();
 		$("#errorL").append(err);
 		$("#errorL").css('background-color' , '#c13d3d');
 		$("#errorL").fadeIn();

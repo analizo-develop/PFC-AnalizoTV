@@ -155,7 +155,7 @@ SceneRegistro.prototype.handleKeyDown = function (keyCode) {
 
 function showError(err)
 {
-
+		$("#errorR").empty()
 		$("#errorR").append(err);
 		$("#errorR").css('background-color' , '#c13d3d');
 		$("#errorR").fadeIn();

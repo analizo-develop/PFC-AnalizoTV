@@ -292,16 +292,33 @@ height: 42%;
   }  
   /* Screen de Categorias */
   
+  #SceneDefault #overLogoC{
+	position : absolute;
+	left : 1190px;
+	top : 5px;
+	padding-top: 0.4em;
+	z-index : 97;
+	text-align: center;	
+	float: right;
+	}
+	
+	#SceneDefault #overDescripcionP{
+position : absolute;
+left : 0px;
+top : 0px;
+width: 100%;
+opacity: 0.9;
+background-color: black;
+}
+  
   #SceneDefault #descripcionP{
-  position : absolute;
-  left : 0px;
-  top : 0px;
-  width: 100%;
+  width: 89%;
   background-color: #83b321;
   color: #ffffff;
+  float: left;
   font: small-caps 1.2em Bitter, arial, sans-serif;
-  opacity: 0.95;
   padding-left: 1em;
+  padding-right: 1em;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
   
@@ -310,7 +327,7 @@ height: 42%;
   #SceneDefault #alerta{
   	position : absolute;
   	left : 1000px;
-  	top : 30px;
+  	top : 50px;
   	height: 70px;
   	width: 250px;
   	background-color: black;

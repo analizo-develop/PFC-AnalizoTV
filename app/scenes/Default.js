@@ -41,7 +41,7 @@ SceneDefault.prototype.handleFocus = function () {
 	$("#fixCategorias").hide();
 	$('#errorD').hide();
 	$("#proximamente").hide();
-	$("#descripcionP").hide();
+	$("#overDescripcionP").hide();
 	
 	//Registramos el control de canal para evitar que el usuario lo manipule
 	sf.key.registerKey(sf.key.CH_UP);
@@ -246,7 +246,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			$("#blackback").show();
 			$("#categorias").hide();
 			$("#fixCategorias").hide();
-			$("#descripcionP").hide();
+			$("#overDescripcionP").hide();
 	    	selected_proyect =-1;
 			break;
 		
@@ -289,6 +289,7 @@ function loadCategories(proyect_load){
 	    	$("#greenC").empty();
 	    	$("#yellowC").empty();
 	    	$("#blueC").empty();
+	    	$("#descripcionP").empty();
 	    	$("#redC").append(proyect.get('cat1'));
 	    	$("#greenC").append(proyect.get('cat2'));
 	    	$("#yellowC").append(proyect.get('cat3'));
@@ -299,7 +300,7 @@ function loadCategories(proyect_load){
 	        $("#blackback").hide();
 	        $("#categorias").show();
 	        $("#fixCategorias").show();
-	        $("#descripcionP").show();
+	        $("#overDescripcionP").show();
 	    }
 	});
 	
