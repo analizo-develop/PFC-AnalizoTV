@@ -6,6 +6,7 @@ var program;
 var refreshInterval;
 var now;
 var userName;
+var onCat = false;
 
 function SceneDefault() {
 
@@ -31,6 +32,7 @@ SceneDefault.prototype.initialize = function () {
 	
 	$("#saludoNo").append(userCount);
 	$("#return").hide();
+	$("#info").hide();
       
     doStart();
 
@@ -58,10 +60,12 @@ SceneDefault.prototype.handleFocus = function () {
 	$("#proximamente").hide();
 	$("#overDescripcionP").hide();
 	$("#return").hide();
+	$("#info").hide();
 	
 	//Registramos el control de canal para evitar que el usuario lo manipule
 	sf.key.registerKey(sf.key.CH_UP);
 	sf.key.registerKey(sf.key.CH_DOWN);
+	sf.key.registerKey(sf.key.INFO);
 };
 
 SceneDefault.prototype.handleBlur = function () {
@@ -86,6 +90,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 		case sf.key.ENTER:
 			//to get channel info
 			//channelInfo2API();
+			$("#infoP").hide();
 			break;
 		case sf.key.N1:
 			if (selected_proyect == -1){
@@ -264,6 +269,8 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			$("#fixCategorias").hide();
 			$("#overDescripcionP").hide();
 			$("#return").hide();
+			$("#info").hide();
+			onCat=false;
 			
 	    	selected_proyect =-1;
 			break;
@@ -290,6 +297,11 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			sf.core.exit(false);
 			break;
 			
+		case sf.key.INFO:
+			event.preventDefault();
+			if(onCat){$("#infoP").show();}
+			break;
+			
 		default:
 			alert("handle default key event, key code(" + keyCode + ")");
 			break;
@@ -308,19 +320,47 @@ function loadCategories(proyect_load){
 		    	$("#yellowC").empty();
 		    	$("#blueC").empty();
 		    	$("#descripcionP").empty();
+		    	$("#infoDescTitulo").empty();
+		    	$("#infoDesc").empty();
+		    	$("#redInfo").empty();
+		    	$("#yellowInfo").empty();
+		    	$("#greenInfo").empty();
+		    	$("#blueInfo").empty();
+		    	$("#redInfoIMG").empty();
+		    	$("#yellowInfoIMG").empty();
+		    	$("#greenInfoIMG").empty();
+		    	$("#blueInfoIMG").empty();
+		    	
 		    	$("#redC").append(proyect.get('cat1'));
 		    	$("#greenC").append(proyect.get('cat2'));
 		    	$("#yellowC").append(proyect.get('cat3'));
 		    	$("#blueC").append(proyect.get('cat4'));
-		    	$("#descripcionP").append(proyect.get('Descripcion'));
 		    	
+		    	$("#descripcionP").append(proyect.get('Pregunta'));
+		    	$("#infoDescTitulo").append(proyect.get('program'));
+		    	$("#infoDesc").append(proyect.get('Descripcion'));
+		    	$("#redInfo").append(proyect.get('cat1')+"</br><span id='redInfoDesc'>"+proyect.get('cat1_Descripcion')+"</span>");
+		    	$("#yellowInfo").append(proyect.get('cat2')+"</br><span id='yellowInfoDesc'>"+proyect.get('cat2_Descripcion')+"</span>");
+		    	$("#greenInfo").append(proyect.get('cat3')+"</br><span id='greenInfoDesc'>"+proyect.get('cat3_Descripcion')+"</span>");
+		    	$("#blueInfo").append(proyect.get('cat4')+"</br><span id='blueInfoDesc'>"+proyect.get('cat4_Descripcion')+"</span>");
+		    	
+		    	$("#redInfoIMG").css('background-image','url('+proyect.get("cat1IMG")+')');
+		    	$("#yellowInfoIMG").css('background-image','url('+proyect.get("cat2IMG")+')');
+		    	$("#greenInfoIMG").css('background-image','url('+proyect.get("cat3IMG")+')');
+		    	$("#blueInfoIMG").css('background-image','url('+proyect.get("cat4IMG")+')');
+		    	$("#infoDescBack").css('background-image','url('+proyect.get("Imagen")+')');
+
+		    			    	
 		        $("#proyects").hide();
 		        $("#blackback").hide();
 		        $("#categorias").show();
 		        $("#fixCategorias").show();
 		        $("#overDescripcionP").show();
 		        $("#return").show();
-		        
+		    	$("#info").show();
+				$("#infoP").show();
+
+		        onCat=true;
 		    }
 		});
 	

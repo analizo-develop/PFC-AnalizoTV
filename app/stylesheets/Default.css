@@ -314,6 +314,7 @@ height: 42%;
   }  
   /* Screen de Categorias */
   
+  
   #SceneDefault #overLogoC{
 	position : absolute;
 	left : 1190px;
@@ -431,6 +432,154 @@ background-color: black;
  	background-position: center top;
  	background-size: 83px;
  }
+  
+  
+  /* Info del proyecto Pre-categorias */
+  #SceneDefault #infoOK{
+  	height: 8%;
+  	width: 100%;
+  	background-color: black;
+  	color: white;
+  	font: small-caps 2em Bitter, arial, sans-serif;
+  	text-align: center;
+  	padding-top: 0.3em;	
+  }
+  
+  #SceneDefault #infoTOP{
+  	height: 6%;
+  	width: 100%;
+  	background-color: black;
+  	color: white;
+  	font: small-caps 2em Bitter, arial, sans-serif;
+  	text-align: center;
+  	padding-top: 0.3em;	
+  }
+  
+  #SceneDefault #infoOKimg{
+  	padding-right: 0.2em;
+  	padding-top: 2px;
+  	
+  }
+  #SceneDefault #infoP{
+  	height: 91%;
+  	width: 100%;
+  	background-color: white;
+  }
+  
+  #SceneDefault #infoMain{
+  	height: 93%;
+  	width: 100%;
+  }
+  
+  #SceneDefault #infoDescBack{
+  	height: 100%;
+  	width: 50%;
+  	float: left;
+  	background-size: cover;
+  	background-position: center;
+  	
+  }
+  
+  #SceneDefault #infoDesc{
+  	width: 90%;
+  	float: left;
+  	background-color: white;
+  	opacity: 0.8;
+  	font-family: Bitter, arial, sans-serif;
+  	padding: 5%;
+  	
+  	text-align: justify;
+  }
+  
+  #SceneDefault #infoDescTitulo{
+  color: #ffffff;
+  font-family: Bitter, arial, sans-serif;
+  width: 100%;
+  background-color: #83b321;
+  text-align:center;
+  padding-top: 10px;
+  padding-bottom: 10px;	
+  }
+  
+  #SceneDefault #infoCat{
+  	height: 100%;
+  	width: 50%;
+  	float: right;
+  	border-collapse: collapse;
+  }
+  
+  
+  #SceneDefault #redInfoIMG{
+  	width: 30%;
+  	background-size: cover;
+  	background-position: center;
+  	
+  }
+  
+  #SceneDefault #blueInfoIMG{
+  	width: 30%;
+  	background-size: cover;
+  	background-position: center;
+  	
+  }
+  
+  #SceneDefault #greenInfoIMG{
+  	width: 30%;
+  	background-size: cover;
+  	background-position: center;
+  	
+  }
+  
+  #SceneDefault #yellowInfoIMG {
+  	width: 30%;
+  	background-size: cover;
+  	background-position: center;
+  	
+  }
+  
+  #SceneDefault #redInfoDesc,#yellowInfoDesc,#greenInfoDesc,#blueInfoDesc{
+  		font: 0.65em Bitter, arial, sans-serif;
+  }
+  
+  #SceneDefault #redInfo{
+  	z-index : 97;
+  	background-color : #c13d3d;
+  	height: 26%;
+  	width: 70%;
+  	vertical-align: top;
+  	font: small-caps 1.4em Bitter, arial, sans-serif;
+  	padding-left: 0.5em;	
+  }
+  #SceneDefault #blueInfo{
+  	z-index : 97;
+  	background-color : #7ebec8;
+  	height: 25%;
+  	width: 70%;
+  	vertical-align: top;
+  	font: small-caps 1.4em Bitter, arial, sans-serif;	
+  		padding-left: 0.5em;	
+  	
+  }
+  #SceneDefault #greenInfo{
+  	z-index : 97;
+  	background-color : #83b321;
+  	height: 25%;
+  	width: 70%;
+  	vertical-align: top;
+  	font: small-caps 1.4em Bitter, arial, sans-serif;	
+  		padding-left: 0.5em;	
+  	
+  }
+  #SceneDefault #yellowInfo{
+  	z-index : 97;
+  	background-color : #e0ed14;
+  	height: 25%;
+  	width: 70%;
+  	vertical-align: top;
+  	font: small-caps 1.4em Bitter, arial, sans-serif;	
+  		padding-left: 0.5em;	
+  	
+  }
   
   
 
