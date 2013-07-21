@@ -1,0 +1,113 @@
+#SceneInfo {
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 1280px;
+	height : 720px;
+	background-color : #ffffff;
+	background-image : url('');
+	z-index: -1;
+	display:inline-block;
+}
+
+#SceneInfo #body_info{
+	width : 90%;
+	height : 100%;
+	background-image : url('../../images/login.jpg');
+	background-size: cover;
+	float: left;
+	-moz-box-shadow: 0 0 1em #000000;
+	-webkit-box-shadow: 0 0 1em #000000;
+	box-shadow: 0 0 1em #000000;
+}
+
+#SceneInfo #ish1I{
+	position : relative;
+	left : 0px;
+	top : 40%;
+	text-align: center;
+	color: white;
+	opacity: 0.5;
+	font-family: Bitter, arial, sans-serif;
+	}
+	
+	
+#SceneInfo #new {
+	text-align: center;
+	color: white;
+	opacity: 0.6;
+	font: small-caps 0.5em Bitter, arial, sans-serif;
+}
+
+#SceneInfo #overH2{
+	position: relative;
+	z-index : 97;
+	width: 40%;
+	float: left;
+	margin-left: 10%;
+	padding-top: 2%;
+	}
+	
+#SceneInfo #overLogo{
+	position : relative;
+	z-index : 97;
+	width: 10%;
+	float: left;
+	opacity: 0.9;
+	text-align: left;	
+	padding-top: 2em;
+	margin-left: 5%;
+	}
+	
+#SceneInfo #infoInfo{
+	width: 50%;
+	float: right;
+	margin-right: 10%;
+	padding-top: 13%;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+#SceneInfo #infoInfoDesc{
+	width: 90%;
+	float: left;
+	background-color: white;
+	opacity: 0.8;
+	font-family: Bitter, arial, sans-serif;
+	padding: 5%;
+	
+	text-align: justify;
+}
+
+#SceneInfo #classIsgreen{
+	color: #83b321;
+	
+}
+
+#SceneInfo #infoInfoTitulo{
+color: #ffffff;
+font-family: Bitter, arial, sans-serif;
+width: 100%;
+text-align:center;
+}
+
+#SceneInfo #toRegfromI{
+	width : 10%;
+	height : 100%;
+	background-color : #313131;
+	float: right;
+}
+
+#SceneInfo #password{
+	position : absolute;
+	left : 170px;
+	top : 230px;
+	width : 173px;
+}
+#SceneInfo #user{
+	position : absolute;
+	left : 170px;
+	top : 150px;
+	width : 173px;
+}

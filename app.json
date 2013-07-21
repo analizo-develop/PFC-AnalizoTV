@@ -4,7 +4,8 @@
   "Login",
   "Default",
   "Splash",
-  "Registro"
+  "Registro",
+  "Info"
  ],
  "theme": "base",
  "modules": ["ime"]

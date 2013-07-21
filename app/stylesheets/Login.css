@@ -26,14 +26,31 @@
 }
 
 #SceneLogin #body_login{
-	width : 90%;
+	width : 80%;
 	height : 100%;
 	background-image : url('../../images/login.jpg');
 	background-size: cover;
-	float: left;
+	float: right;
 	-moz-box-shadow: 0 0 1em #000000;
 	-webkit-box-shadow: 0 0 1em #000000;
 	box-shadow: 0 0 1em #000000;
+	}
+	
+#SceneLogin #ish12I{
+	position : relative;
+	left : 0px;
+	top : 40%;
+	text-align: center;
+	color: white;
+	opacity: 0.5;
+	font-family: Bitter, arial, sans-serif;
+	}
+
+#SceneLogin #toInfo{
+	width : 10%;
+	height : 100%;
+	background-color : #313131;
+	float: left;
 	}
 
 #SceneLogin #ish1{
@@ -54,6 +71,13 @@
 }
 	
 #SceneLogin #new {
+	text-align: center;
+	color: white;
+	opacity: 0.6;
+	font: small-caps 0.5em Bitter, arial, sans-serif;
+}
+
+#SceneLogin #new2 {
 	text-align: center;
 	color: white;
 	opacity: 0.6;
@@ -89,13 +113,13 @@
 
 #SceneLogin #password{
 	position : absolute;
-	left : 110px;
+	left : 210px;
 	top : 310px;
 	width : 250px;
 }
 #SceneLogin #user{
 	position : absolute;
-	left : 110px;
+	left : 210px;
 	top : 210px;
 	width : 250px;
 }
@@ -104,7 +128,7 @@
 	opacity : 0.9;
 	font : 15pt Bitter, arial, sans-serif;
 	color : #000000;
-	left : 140px;
+	left : 240px;
 	top : 190px;
 	width : 258px;
 }
@@ -113,7 +137,7 @@
 	opacity : 0.9;
 	font : 15pt Bitter, arial, sans-serif;
 	color : #000000;
-	left : 140px;
+	left : 240px;
 	top : 290px;
 	width : 130px;
 }
