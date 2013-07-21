@@ -23,10 +23,14 @@ SceneDefault.prototype.initialize = function () {
 			
 		} else {
 			userName = user.get('username');
+			$("#saludoName").append(userName);
 		}
 	
 	});
-
+	
+	
+	$("#saludoNo").append(userCount);
+	$("#return").hide();
       
     doStart();
 
@@ -53,6 +57,7 @@ SceneDefault.prototype.handleFocus = function () {
 	$('#errorD').hide();
 	$("#proximamente").hide();
 	$("#overDescripcionP").hide();
+	$("#return").hide();
 	
 	//Registramos el control de canal para evitar que el usuario lo manipule
 	sf.key.registerKey(sf.key.CH_UP);
@@ -258,6 +263,8 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			$("#categorias").hide();
 			$("#fixCategorias").hide();
 			$("#overDescripcionP").hide();
+			$("#return").hide();
+			
 	    	selected_proyect =-1;
 			break;
 		
@@ -292,28 +299,30 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 function loadCategories(proyect_load){
 	
 	client.getEntity(proyect_load, function (err, proyect) {
-	    if (err){
-	    	alert("categories not loaded");
-
-	    } else {
-	    	$("#redC").empty();
-	    	$("#greenC").empty();
-	    	$("#yellowC").empty();
-	    	$("#blueC").empty();
-	    	$("#descripcionP").empty();
-	    	$("#redC").append(proyect.get('cat1'));
-	    	$("#greenC").append(proyect.get('cat2'));
-	    	$("#yellowC").append(proyect.get('cat3'));
-	    	$("#blueC").append(proyect.get('cat4'));
-	    	$("#descripcionP").append(proyect.get('Descripcion'));
-	    	
-	        $("#proyects").hide();
-	        $("#blackback").hide();
-	        $("#categorias").show();
-	        $("#fixCategorias").show();
-	        $("#overDescripcionP").show();
-	    }
-	});
+		    if (err){
+		    	alert("categories not loaded");
+	
+		    } else {
+		    	$("#redC").empty();
+		    	$("#greenC").empty();
+		    	$("#yellowC").empty();
+		    	$("#blueC").empty();
+		    	$("#descripcionP").empty();
+		    	$("#redC").append(proyect.get('cat1'));
+		    	$("#greenC").append(proyect.get('cat2'));
+		    	$("#yellowC").append(proyect.get('cat3'));
+		    	$("#blueC").append(proyect.get('cat4'));
+		    	$("#descripcionP").append(proyect.get('Descripcion'));
+		    	
+		        $("#proyects").hide();
+		        $("#blackback").hide();
+		        $("#categorias").show();
+		        $("#fixCategorias").show();
+		        $("#overDescripcionP").show();
+		        $("#return").show();
+		        
+		    }
+		});
 	
 }
 
@@ -406,68 +415,106 @@ function loadProgram(proyect_load){
 function doCheckIn(proyect_load, category){
 	$("#alerta").fadeIn();
 	
-	  client.getEntity(proyect_load, function(err, proyecto){
-	  		if (err){
-	  			
-	  		} else {
-	  			//aqui
-	  			var resultados = proyecto.get('Resultados');
-	  			
-	  			var options = {
-	  					type:resultados
-	  				}
-	  			
-	  				client.createCollection(options, function (err, checkin) {
-	  					if (err) {
-	  						error('could not make collection');
-	  					} else {
-	  			
-	  						//success('new Collection created');
-	  			  			now=new Date();
-	  						//create a new dog and add it to the collection
-	  						var options = {
-	  							name:now.toString()+'-'+proyecto.get('name')+'-'+userName,
-	  							categoria:category,
-	  							proyecto:proyecto.get('name'),
-	  							hora:now.getHours(),
-	  							minuto:now.getMinutes(),
-	  							segundo:now.getSeconds(),
-	  							mes:now.getMonth(),
-	  							año:now.getFullYear(),
-	  							dia:now.getDate(),
-	  							diaSemana:now.getDay(),
-	  							fecha:now.toString(),
-	  							usuario:userName
-	  						}
-	  						//just pass the options to the addEntity method
-	  						//to the collection and it is saved automatically
-	  						checkin.addEntity(options, function(err, last, data) {
-	  							if (err) {
-	  								error('extra dog not saved or added to collection');
-	  							} else {
-	  								var results = proyecto.get('cat'+category+'_results')+1;
-	  								proyecto.set('cat'+category+'_results',results);
-	  								proyecto.save(function(err){
-	  									if (err){
-	  										//error('proyect not saved');
-	  									} else {
-	  										//success('proyect is saved');
-	  										alert('Checked In');
-	  						    			setTimeout(
-	  						    				function() 
-	  						    				{$("#alerta").fadeOut();}, 1000);
-	  										
-	  									}
-	  								});
-	  								
-	  							}
-	  						});
-	  					}
-	  				});
-	  				
-	  		}
-	  	});
+	now=new Date();
+	client.getEntity(proyect_load, function(err, proyecto){
+ 		if (err){
+ 			
+ 		} else {
+ 				
+ 				if(now.getHours() >= proyecto.get('HoraInicio'))
+ 				{
+ 					if(now.getMinutes() >= proyecto.get('MinutoInicio'))
+ 					{
+ 						if(now.getHours() <= proyecto.get('HoraFin'))
+ 						{
+ 							if(now.getMinutes() <= proyecto.get('MinutoFin'))
+ 							{	
+ 								
 
+ 								client.getEntity(proyect_load, function(err, proyecto){
+ 							  		if (err){
+ 							  			
+ 							  		} else {
+ 							  			//aqui
+ 							  			var resultados = proyecto.get('Resultados');
+ 							  			
+ 							  			var options = {
+ 							  					type:resultados
+ 							  				}
+ 							  			
+ 							  				client.createCollection(options, function (err, checkin) {
+ 							  					if (err) {
+ 							  						error('could not make collection');
+ 							  					} else {
+ 							  			
+ 							  						//success('new Collection created');
+ 							  			  			now=new Date();
+ 							  						//create a new dog and add it to the collection
+ 							  						var options = {
+ 							  							name:now.toString()+'-'+proyecto.get('name')+'-'+userName,
+ 							  							categoria:category,
+ 							  							proyecto:proyecto.get('name'),
+ 							  							hora:now.getHours(),
+ 							  							minuto:now.getMinutes(),
+ 							  							segundo:now.getSeconds(),
+ 							  							mes:now.getMonth(),
+ 							  							año:now.getFullYear(),
+ 							  							dia:now.getDate(),
+ 							  							diaSemana:now.getDay(),
+ 							  							fecha:now.toString(),
+ 							  							usuario:userName
+ 							  						}
+ 							  						//just pass the options to the addEntity method
+ 							  						//to the collection and it is saved automatically
+ 							  						checkin.addEntity(options, function(err, last, data) {
+ 							  							if (err) {
+ 							  								error('extra dog not saved or added to collection');
+ 							  							} else {
+ 							  								var results = proyecto.get('cat'+category+'_results');
+ 							  								results = parseInt(results) + 1;
+ 							  								proyecto.set('cat'+category+'_results',results);
+ 							  								proyecto.save(function(err){
+ 							  									if (err){
+ 							  										//error('proyect not saved');
+ 							  									} else {
+ 							  										//success('proyect is saved');
+ 							  										alert('Checked In');
+ 							  						    			$("#alerta").fadeOut();
+ 							  										
+ 							  									}
+ 							  								});
+ 							  								
+ 							  							}
+ 							  						});
+ 							  					}
+ 							  				});
+ 							  				
+ 							  		}
+ 							  	});
+ 								
+ 								
+ 					            
+ 							} else{showError("El programa ha terminado.")}
+ 						} else{showError("El programa ha terminado.")}
+ 					} else{showError("El programa ha terminado.")}
+ 			} else{showError("El programa ha terminado.")}
+ 			}
+ 		});
+
+	  
+
+}
+
+function showError(err)
+{
+		$("#errorR").empty()
+		$("#errorR").append(err);
+		$("#errorR").css('background-color' , '#c13d3d');
+		$("#errorR").fadeIn();
+		setTimeout(
+			function() 
+			{$("#errorR").fadeOut();}, 2000);
+	
 }
 
 

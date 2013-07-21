@@ -51,7 +51,29 @@
 	height: 30px;
 	width: 100%;
 	background-color: black;
-	color: #ffffff;
+	color: white;
+	font: small-caps 1em Bitter, arial, sans-serif;
+	
+}
+
+#SceneDefault #barra #saludo{
+	float: left;
+	width: 50%;
+	padding-top: 0.3em;
+	padding-left: 1em;
+	
+}
+
+#SceneDefault #barra #icons{
+	float: right;
+	width: 40%;
+	padding-top: 0.3em;	
+	text-align: right;
+	padding-right: 1em;
+}
+
+#SceneDefault #return, #info, #logout, #exit{
+	padding-right: 2em;
 }
 
 #SceneDefault #proyects {
@@ -170,7 +192,7 @@ height: 42%;
 }
 
 
-#SceneDefault #emision #programa1E #titulo:after {
+#SceneDefault #emision #programa1E #titulo:before {
     content: "1";
     width: 100%;
     position: absolute;
@@ -182,7 +204,7 @@ height: 42%;
 	text-shadow: 0 0 15px #000000;
 }
   
-  #SceneDefault #emision #programa2E #titulo:after {
+  #SceneDefault #emision #programa2E #titulo:before {
       content: "2";
       width: 100%;
       position: absolute;
@@ -195,7 +217,7 @@ height: 42%;
      
     }
     
-  #SceneDefault #emision #programa3E #titulo:after {
+  #SceneDefault #emision #programa3E #titulo:before {
         content: "3";
         width: 100%;
         position: absolute;
@@ -207,7 +229,7 @@ height: 42%;
         text-shadow: 0 0 15px #000000;
       }
   
-  #SceneDefault #emision #programa4E #titulo:after {
+  #SceneDefault #emision #programa4E #titulo:before {
       content: "4";
       width: 100%;
       position: absolute;
@@ -219,7 +241,7 @@ height: 42%;
       text-shadow: 0 0 15px #000000;
   }
   
-  #SceneDefault #emision #programa5E #titulo:after {
+  #SceneDefault #emision #programa5E #titulo:before {
       content: "5";
       width: 100%;
       position: absolute;
@@ -231,7 +253,7 @@ height: 42%;
       text-shadow: 0 0 15px #000000;
   }
   
-  #SceneDefault #emision #programa6E #titulo:after {
+  #SceneDefault #emision #programa6E #titulo:before {
       content: "6";
       width: 100%;
       position: absolute;
@@ -243,7 +265,7 @@ height: 42%;
       text-shadow: 0 0 15px #000000;
   }
   
-  #SceneDefault #emision #programa7E #titulo:after {
+  #SceneDefault #emision #programa7E #titulo:before {
       content: "7";
       width: 100%;
       position: absolute;
@@ -255,7 +277,7 @@ height: 42%;
       text-shadow: 0 0 15px #000000;
   }
   
-  #SceneDefault #emision #programa8E #titulo:after {
+  #SceneDefault #emision #programa8E #titulo:before {
       content: "8";
       width: 100%;
       position: absolute;
@@ -267,7 +289,7 @@ height: 42%;
       text-shadow: 0 0 15px #000000;
   }
   
-  #SceneDefault #emision #programa9E #titulo:after {
+  #SceneDefault #emision #programa9E #titulo:before {
       content: "9";
       width: 100%;
       position: absolute;
@@ -279,7 +301,7 @@ height: 42%;
       text-shadow: 0 0 15px #000000;
   }
   
-  #SceneDefault #emision #programa0E #titulo:after {
+  #SceneDefault #emision #programa0E #titulo:before {
       content: "0";
       width: 100%;
       position: absolute;
