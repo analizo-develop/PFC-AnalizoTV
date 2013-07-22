@@ -7,6 +7,7 @@ var refreshInterval;
 var now;
 var userName;
 var onCat = false;
+var question;
 
 function SceneDefault() {
 
@@ -24,7 +25,7 @@ SceneDefault.prototype.initialize = function () {
 			
 		} else {
 			userName = user.get('username');
-			$("#saludoName").append(userName);
+			$("#saludoName").append('<b>'+userName+'</b');
 		}
 	
 	});
@@ -91,6 +92,10 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			//to get channel info
 			//channelInfo2API();
 			$("#infoP").hide();
+			$("#categorias").show();
+			$("#fixCategorias").show();
+			$("#descripcionP").empty();
+			$("#descripcionP").append(question);
 			break;
 		case sf.key.N1:
 			if (selected_proyect == -1){
@@ -299,7 +304,13 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			
 		case sf.key.INFO:
 			event.preventDefault();
-			if(onCat){$("#infoP").show();}
+			if(onCat){
+			$("#infoP").show();
+			$("#categorias").hide();
+			$("#fixCategorias").hide();
+			$("#descripcionP").empty();
+			$("#descripcionP").append("información sobre el proyecto");
+			}
 			break;
 			
 		default:
@@ -320,7 +331,8 @@ function loadCategories(proyect_load){
 		    	$("#yellowC").empty();
 		    	$("#blueC").empty();
 		    	$("#descripcionP").empty();
-		    	$("#infoDescTitulo").empty();
+		    	$("#infoDescTitulo2").empty();
+		    	$("#infoDescPregunta2").empty();
 		    	$("#infoDesc").empty();
 		    	$("#redInfo").empty();
 		    	$("#yellowInfo").empty();
@@ -336,8 +348,10 @@ function loadCategories(proyect_load){
 		    	$("#yellowC").append(proyect.get('cat3'));
 		    	$("#blueC").append(proyect.get('cat4'));
 		    	
-		    	$("#descripcionP").append(proyect.get('Pregunta'));
-		    	$("#infoDescTitulo").append(proyect.get('program'));
+		    	question = proyect.get('Pregunta');
+		    	$("#descripcionP").append("información sobre el proyecto");
+		    	$("#infoDescTitulo2").append(proyect.get('program'));
+		    	$("#infoDescPregunta2").append(question);
 		    	$("#infoDesc").append(proyect.get('Descripcion'));
 		    	$("#redInfo").append(proyect.get('cat1')+"</br><span id='redInfoDesc'>"+proyect.get('cat1_Descripcion')+"</span>");
 		    	$("#yellowInfo").append(proyect.get('cat2')+"</br><span id='yellowInfoDesc'>"+proyect.get('cat2_Descripcion')+"</span>");
@@ -353,8 +367,8 @@ function loadCategories(proyect_load){
 		    			    	
 		        $("#proyects").hide();
 		        $("#blackback").hide();
-		        $("#categorias").show();
-		        $("#fixCategorias").show();
+//		        $("#categorias").show();
+//		        $("#fixCategorias").show();
 		        $("#overDescripcionP").show();
 		        $("#return").show();
 		    	$("#info").show();

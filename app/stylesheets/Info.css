@@ -1,13 +1,11 @@
 #SceneInfo {
-	position : absolute;
+	position : fixed;
 	left : 0px;
 	top : 0px;
 	width : 1280px;
 	height : 720px;
-	background-color : #ffffff;
+	background-color: transparent;
 	background-image : url('');
-	z-index: -1;
-	display:inline-block;
 }
 
 #SceneInfo #body_info{
@@ -83,6 +81,12 @@
 #SceneInfo #classIsgreen{
 	color: #83b321;
 	
+}
+
+#SceneInfo #konami{
+	float: left;
+	margin-top:220px;
+	z-index: 97;
 }
 
 #SceneInfo #infoInfoTitulo{

@@ -131,6 +131,7 @@ function showError(err)
 }
 
 function loginUser() {
+									
 	client.logout();
 	client.login(username, password,
 		function (err) {
@@ -158,6 +159,7 @@ function loginUser() {
 						//you can then get info from the user entity object:
 						//var username = user.get('username');
 						//notice('logged in user was: ' + username);
+						
 						sf.scene.hide('Login');
 		                sf.scene.show('Default');
 		            	sf.scene.focus('Default');

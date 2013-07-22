@@ -1,5 +1,5 @@
 #SceneRegistro {
-	position : absolute;
+	position : fixed;
 	left : 0px;
 	top : 0px;
 	width : 1280px;
@@ -35,6 +35,19 @@
 	-webkit-box-shadow: 0 0 1em #000000;
 	box-shadow: 0 0 1em #000000;
 	}
+	
+#SceneRegistro #infoOKRegistro{
+  	position : absolute;
+	left : 126px;
+	top : 685px;
+	height: 30px;
+	width: 1180px;
+  	background-color: black;
+  	padding-bottom: 5px;
+  	color: white;
+  	font: small-caps 1em Bitter, arial, sans-serif;
+  	text-align: center;
+  }
 
 #SceneRegistro #ish1{
 	position : relative;

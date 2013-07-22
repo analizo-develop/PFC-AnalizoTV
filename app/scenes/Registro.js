@@ -100,6 +100,10 @@ SceneRegistro.prototype.handleHide = function () {
 SceneRegistro.prototype.handleFocus = function () {
 	alert("SceneRegistro.handleFocus()");
 	// this function will be called when the scene manager focus this scene
+	$('#userR').sfTextInput({text:''});
+	$('#mailR').sfTextInput({text:''});
+	$('#pass1R').sfTextInput({text:''});
+	$('#pass2R').sfTextInput({text:''});
 	$('#userR').sfTextInput('blur');
 	$('#mailR').sfTextInput('blur');
 	$('#pass1R').sfTextInput('blur');

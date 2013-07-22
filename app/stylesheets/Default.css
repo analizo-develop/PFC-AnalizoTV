@@ -38,7 +38,7 @@
 	left : 0px;
 	top : 0px;
 	width : 1280px;
-	height : 720px;
+	height : 100%;
 	background-color: #000;
 	opacity: 0.8;
 	z-index: -1;
@@ -56,7 +56,7 @@
 	
 }
 
-#SceneDefault #barra #saludo{
+#SceneDefault #saludo{
 	float: left;
 	width: 50%;
 	padding-top: 0.3em;
@@ -64,7 +64,7 @@
 	
 }
 
-#SceneDefault #barra #icons{
+#SceneDefault #icons{
 	float: right;
 	width: 40%;
 	padding-top: 0.3em;	
@@ -371,6 +371,7 @@ background-color: black;
   	opacity: 0.95;
   }
   
+  
   #SceneDefault #fixCategorias{
   	z-index : 97;
   	height: 85%;
@@ -440,13 +441,13 @@ background-color: black;
   	width: 100%;
   	background-color: black;
   	color: white;
-  	font: small-caps 2em Bitter, arial, sans-serif;
+  	font: small-caps 1.5em Bitter, arial, sans-serif;
   	text-align: center;
   	padding-top: 0.3em;	
   }
   
   #SceneDefault #infoTOP{
-  	height: 6%;
+  	height: 5%;
   	width: 100%;
   	background-color: black;
   	color: white;
@@ -457,17 +458,19 @@ background-color: black;
   
   #SceneDefault #infoOKimg{
   	padding-right: 0.2em;
-  	padding-top: 2px;
+  	padding-left: 0.2em;
+  	padding-top: 10px;
   	
   }
   #SceneDefault #infoP{
-  	height: 91%;
+  	height: 100%;
   	width: 100%;
+  	float: left;
   	background-color: white;
   }
   
   #SceneDefault #infoMain{
-  	height: 93%;
+  	height: 81%;
   	width: 100%;
   }
   
@@ -477,6 +480,7 @@ background-color: black;
   	float: left;
   	background-size: cover;
   	background-position: center;
+  	background-image: url('proyecto.jpg'); /*QUITAR*/
   	
   }
   
@@ -494,15 +498,73 @@ background-color: black;
   #SceneDefault #infoDescTitulo{
   color: #ffffff;
   font-family: Bitter, arial, sans-serif;
+  width: 25%;
+  background-color: #20211f;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;	
+  }
+  #SceneDefault #infoDescTitulo2{
+  font-family: Bitter, arial, sans-serif;
+  width: 460px;
+  background-color: white;
+  opacity: 0.8;
+  float: right;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;	
+  }
+  
+  #SceneDefault #infoDescPregunta{
+  color: #ffffff;
+  font-family: Bitter, arial, sans-serif;
+  width: 25%;
+  background-color: #20211f;
+  float: left;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;	
+  }
+  
+  #SceneDefault #infoDescPregunta2{
+  font-family: Bitter, arial, sans-serif;
+  width: 460px;
+  background-color: white;
+  opacity: 0.8;
+  float: right;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  }
+  
+  #SceneDefault #clearBoth { clear:both; }
+  
+  #SceneDefault #infoDesc_Descripcion{
+  color: #ffffff;
+  font-family: Bitter, arial, sans-serif;
   width: 100%;
-  background-color: #83b321;
+  background-color: #20211f;
+  float: left;
+  text-align:center;
+  padding-top: 10px;
+  padding-bottom: 10px;	
+  }
+  
+  
+  #SceneDefault #infoDesc_Categorias{
+  color: #ffffff;
+  font-family: Bitter, arial, sans-serif;
+  width: 100%;
+  background-color: #20211f;
   text-align:center;
   padding-top: 10px;
   padding-bottom: 10px;	
   }
   
   #SceneDefault #infoCat{
-  	height: 100%;
+  	height: 544px;
   	width: 50%;
   	float: right;
   	border-collapse: collapse;
@@ -511,29 +573,37 @@ background-color: black;
   
   #SceneDefault #redInfoIMG{
   	width: 30%;
+  	background-color : #c13d3d;
   	background-size: cover;
   	background-position: center;
+  	background-image: url('A.png');
   	
   }
   
   #SceneDefault #blueInfoIMG{
   	width: 30%;
+  	background-color : #7ebec8;
   	background-size: cover;
   	background-position: center;
+  	background-image: url('D.png');
   	
   }
   
   #SceneDefault #greenInfoIMG{
   	width: 30%;
+  	background-color : #83b321;
   	background-size: cover;
   	background-position: center;
+  	background-image: url('B.png');
   	
   }
   
   #SceneDefault #yellowInfoIMG {
   	width: 30%;
+  	background-color : #e0ed14;
   	background-size: cover;
   	background-position: center;
+  	background-image: url('C.png');
   	
   }
   

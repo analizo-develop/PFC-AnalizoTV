@@ -1,5 +1,5 @@
 #SceneLogin {
-	position : absolute;
+	position : fixed;
 	left : 0px;
 	top : 0px;
 	width : 1280px;
@@ -24,6 +24,20 @@
 	opacity: 0.95;
 	padding-bottom: 0.8em;
 }
+
+#SceneLogin #infoOKLogin{
+  	position : absolute;
+	left : 126px;
+	top : 685px;
+	height: 30px;
+	width: 1027px;
+  	background-color: black;
+  	padding-bottom: 5px;
+  	color: white;
+  	font: small-caps 1em Bitter, arial, sans-serif;
+  	text-align: center;
+  }
+  
 
 #SceneLogin #body_login{
 	width : 80%;
