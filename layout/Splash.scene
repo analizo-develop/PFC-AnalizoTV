@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tv.samsung.sdk="http://www.samsung.com/tvsdk">
   <tv.samsung.sdk:VisualScene xmi:id="_hznzoNj3EeKwpr1gLHYsSQ" sId="5i7pis3fzx6cq" sName="Splash" sType="2" sBgImage="" sBgClr="#313131" sWidth="1280" sHeight="720">
-    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_PL-YkPMNEeKzA7OyK_Rd1g" sWidth="58.0" sHeight="54.0" sBgImage="images/loading/loading.png" sId="loading" sCaption="" sResizeOpt="ResizeOption_None" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="loadingimage" sFunctionName="sfLoading" sLockCaption="true" sLockWidth="true" sLockHeight="true" sLockBgImage="true">
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_PL-YkfMNEeKzA7OyK_Rd1g" sType="NUMBER" sValue="590" sName="left"/>
-      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_PL-YkvMNEeKzA7OyK_Rd1g" sType="NUMBER" sValue="340" sName="top"/>
+    <sComponents xmi:type="tv.samsung.sdk:VisualCtrlComponent" xmi:id="_EPbEoPN_EeKFGomLzo-mVg" sWidth="58.0" sHeight="54.0" sBgImage="images/loading/loading.png" sId="loading" sCaption="" sResizeOpt="ResizeOption_None" sUserCodeIncludeJs="" sUserCodeInit="" sUserCodeDestroy="" sUserLibJs="" sUserLibImgDir="" sUserLibCss="" sType="loadingimage" sFunctionName="sfLoading" sLockCaption="true" sLockWidth="true" sLockHeight="true" sLockBgImage="true">
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_EPbEofN_EeKFGomLzo-mVg" sType="NUMBER" sValue="590" sName="left"/>
+      <sCssAttrs xmi:type="tv.samsung.sdk:CssAttrStruct" xmi:id="_EPbEovN_EeKFGomLzo-mVg" sType="NUMBER" sValue="340" sName="top"/>
     </sComponents>
   </tv.samsung.sdk:VisualScene>
   <notation:Diagram xmi:id="_hz3EMNj3EeKwpr1gLHYsSQ" type="VisualScene" element="_hznzoNj3EeKwpr1gLHYsSQ" name="Splash.scene" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_PL-Yk_MNEeKzA7OyK_Rd1g" type="2001" element="_PL-YkPMNEeKzA7OyK_Rd1g" fontName="Segoe UI">
-      <children xmi:type="notation:DecorationNode" xmi:id="_PL-YlfMNEeKzA7OyK_Rd1g" type="5001"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PL-YlvMNEeKzA7OyK_Rd1g" x="590" y="340" width="58" height="54"/>
+    <children xmi:type="notation:Shape" xmi:id="_EPbEo_N_EeKFGomLzo-mVg" type="2001" element="_EPbEoPN_EeKFGomLzo-mVg" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_EPbEpfN_EeKFGomLzo-mVg" type="5001"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EPbEpvN_EeKFGomLzo-mVg" x="590" y="340" width="58" height="54"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_hz3EMdj3EeKwpr1gLHYsSQ"/>
   </notation:Diagram>

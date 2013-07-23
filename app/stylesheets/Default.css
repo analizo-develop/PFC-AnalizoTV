@@ -447,7 +447,7 @@ background-color: black;
   }
   
   #SceneDefault #infoTOP{
-  	height: 5%;
+  	height: 32px;
   	width: 100%;
   	background-color: black;
   	color: white;
@@ -467,10 +467,12 @@ background-color: black;
   	width: 100%;
   	float: left;
   	background-color: white;
+  	background-size: cover;
+  	background-position: center; 
   }
   
   #SceneDefault #infoMain{
-  	height: 81%;
+  	height: 82%;
   	width: 100%;
   }
   
@@ -478,51 +480,46 @@ background-color: black;
   	height: 100%;
   	width: 50%;
   	float: left;
-  	background-size: cover;
-  	background-position: center;
-  	background-image: url('proyecto.jpg'); /*QUITAR*/
-  	
+  	 	
   }
   
   #SceneDefault #infoDesc{
   	width: 90%;
   	float: left;
   	background-color: white;
-  	opacity: 0.8;
+  	opacity: 0.9;
   	font-family: Bitter, arial, sans-serif;
   	padding: 5%;
-  	
+  	height: 56%;
   	text-align: justify;
   }
   
   #SceneDefault #infoDescTitulo{
   color: #ffffff;
   font-family: Bitter, arial, sans-serif;
-  width: 25%;
-  background-color: #20211f;
-  text-align: right;
+  width: 100%;
+  background-color: #575956;
+  text-align: center;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;	
   }
   #SceneDefault #infoDescTitulo2{
   font-family: Bitter, arial, sans-serif;
-  width: 460px;
+  width: 100%;
   background-color: white;
-  opacity: 0.8;
-  float: right;
+  opacity: 0.9;
   padding-top: 10px;
-  padding-left: 10px;
+  text-align: center;
   padding-bottom: 10px;	
   }
   
   #SceneDefault #infoDescPregunta{
   color: #ffffff;
   font-family: Bitter, arial, sans-serif;
-  width: 25%;
-  background-color: #20211f;
-  float: left;
-  text-align: right;
+  width: 100%;
+  background-color: #575956;
+  text-align: center;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;	
@@ -530,13 +527,12 @@ background-color: black;
   
   #SceneDefault #infoDescPregunta2{
   font-family: Bitter, arial, sans-serif;
-  width: 460px;
+  width: 100%;
   background-color: white;
-  opacity: 0.8;
-  float: right;
+  opacity: 0.9;
   padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  text-align: center;
+  padding-bottom: 10px;	
   }
   
   #SceneDefault #clearBoth { clear:both; }
@@ -545,11 +541,10 @@ background-color: black;
   color: #ffffff;
   font-family: Bitter, arial, sans-serif;
   width: 100%;
-  background-color: #20211f;
-  float: left;
+  background-color: #575956;
   text-align:center;
   padding-top: 10px;
-  padding-bottom: 10px;	
+  padding-bottom: 10px;		
   }
   
   
@@ -557,14 +552,14 @@ background-color: black;
   color: #ffffff;
   font-family: Bitter, arial, sans-serif;
   width: 100%;
-  background-color: #20211f;
+  background-color: #575956;
   text-align:center;
   padding-top: 10px;
   padding-bottom: 10px;	
   }
   
   #SceneDefault #infoCat{
-  	height: 544px;
+  	height: 550px;
   	width: 50%;
   	float: right;
   	border-collapse: collapse;
@@ -573,37 +568,44 @@ background-color: black;
   
   #SceneDefault #redInfoIMG{
   	width: 30%;
-  	background-color : #c13d3d;
+  	background-color : white;
+  	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('A.png');
+  	background-image: url('AC.png');
+  	border-bottom: 1px solid #575956;
   	
   }
   
   #SceneDefault #blueInfoIMG{
   	width: 30%;
-  	background-color : #7ebec8;
+  	background-color : white;
+  	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('D.png');
+  	background-image: url('DC.png');
   	
   }
   
   #SceneDefault #greenInfoIMG{
   	width: 30%;
-  	background-color : #83b321;
+  	background-color : white;
+  	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('B.png');
+  	background-image: url('BC.png');
+  	border-bottom: 1px solid #575956;
   	
   }
   
   #SceneDefault #yellowInfoIMG {
   	width: 30%;
-  	background-color : #e0ed14;
+  	background-color : white;
+  	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('C.png');
+  	background-image: url('CC.png');
+  	border-bottom: 1px solid #575956;
   	
   }
   
@@ -613,41 +615,52 @@ background-color: black;
   
   #SceneDefault #redInfo{
   	z-index : 97;
-  	background-color : #c13d3d;
+  	background-color : white;
+  	opacity: 0.9;
   	height: 26%;
   	width: 70%;
   	vertical-align: top;
   	font: small-caps 1.4em Bitter, arial, sans-serif;
-  	padding-left: 0.5em;	
+  	padding-left: 0.5em;
+  	border-left: 15px solid #c13d3d;
+  	border-bottom: 1px solid #575956;
   }
   #SceneDefault #blueInfo{
   	z-index : 97;
-  	background-color : #7ebec8;
+  	background-color : white;
+  	opacity: 0.9;
   	height: 25%;
   	width: 70%;
   	vertical-align: top;
   	font: small-caps 1.4em Bitter, arial, sans-serif;	
-  		padding-left: 0.5em;	
+  	padding-left: 0.5em;	
+  	border-left: 15px solid #7ebec8;
   	
   }
   #SceneDefault #greenInfo{
   	z-index : 97;
-  	background-color : #83b321;
+  	background-color : white;
+  	opacity: 0.9;
   	height: 25%;
   	width: 70%;
   	vertical-align: top;
   	font: small-caps 1.4em Bitter, arial, sans-serif;	
-  		padding-left: 0.5em;	
+  	padding-left: 0.5em;	
+  	border-left: 15px solid #83b321;
+  	border-bottom: 1px solid #575956;
   	
   }
   #SceneDefault #yellowInfo{
   	z-index : 97;
-  	background-color : #e0ed14;
+  	background-color : white;
+  	opacity: 0.9;
   	height: 25%;
   	width: 70%;
   	vertical-align: top;
   	font: small-caps 1.4em Bitter, arial, sans-serif;	
-  		padding-left: 0.5em;	
+  	padding-left: 0.5em;	
+  	border-left: 15px solid #e0ed14;
+  	border-bottom: 1px solid #575956;
   	
   }
   

@@ -362,7 +362,7 @@ function loadCategories(proyect_load){
 		    	$("#yellowInfoIMG").css('background-image','url('+proyect.get("cat2IMG")+')');
 		    	$("#greenInfoIMG").css('background-image','url('+proyect.get("cat3IMG")+')');
 		    	$("#blueInfoIMG").css('background-image','url('+proyect.get("cat4IMG")+')');
-		    	$("#infoDescBack").css('background-image','url('+proyect.get("Imagen")+')');
+		    	$("#infoP").css('background-image','url('+proyect.get("Imagen")+')');
 
 		    			    	
 		        $("#proyects").hide();
