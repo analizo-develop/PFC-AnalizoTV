@@ -309,7 +309,9 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			$("#categorias").hide();
 			$("#fixCategorias").hide();
 			$("#descripcionP").empty();
-			$("#descripcionP").append("información sobre el proyecto");
+			$("#descripcionP").append("<img src='images/botones/info.png' width='13px' /> información sobre el proyecto");
+			$("#okinfotext").empty();
+	    	$("#okinfotext").append("volver al análisis");
 			}
 			break;
 			
@@ -342,6 +344,7 @@ function loadCategories(proyect_load){
 		    	$("#yellowInfoIMG").empty();
 		    	$("#greenInfoIMG").empty();
 		    	$("#blueInfoIMG").empty();
+		    	$("#okinfotext").empty();
 		    	
 		    	$("#redC").append(proyect.get('cat1'));
 		    	$("#greenC").append(proyect.get('cat2'));
@@ -349,7 +352,8 @@ function loadCategories(proyect_load){
 		    	$("#blueC").append(proyect.get('cat4'));
 		    	
 		    	question = proyect.get('Pregunta');
-		    	$("#descripcionP").append("información sobre el proyecto");
+		    	$("#descripcionP").append("<img src='images/botones/info.png' width='13px' /> información sobre el proyecto");
+		    	$("#okinfotext").append("comenzar");
 		    	$("#infoDescTitulo2").append(proyect.get('program'));
 		    	$("#infoDescPregunta2").append(question);
 		    	$("#infoDesc").append(proyect.get('Descripcion'));
