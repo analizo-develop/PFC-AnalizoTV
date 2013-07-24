@@ -358,17 +358,18 @@ function loadCategories(proyect_load){
 		    	$("#greenInfo").append(proyect.get('cat3')+"</br><span id='greenInfoDesc'>"+proyect.get('cat3_Descripcion')+"</span>");
 		    	$("#blueInfo").append(proyect.get('cat4')+"</br><span id='blueInfoDesc'>"+proyect.get('cat4_Descripcion')+"</span>");
 		    	
-		    	$("#redInfoIMG").css('background-image','url('+proyect.get("cat1IMG")+')');
-		    	$("#yellowInfoIMG").css('background-image','url('+proyect.get("cat2IMG")+')');
-		    	$("#greenInfoIMG").css('background-image','url('+proyect.get("cat3IMG")+')');
-		    	$("#blueInfoIMG").css('background-image','url('+proyect.get("cat4IMG")+')');
+		    		$("#redInfoIMG").css('background-image','url('+proyect.get("cat1IMG")+')');
+		    		$("#greenInfoIMG").css('background-image','url('+proyect.get("cat2IMG")+')');
+		    		$("#yellowInfoIMG").css('background-image','url('+proyect.get("cat3IMG")+')');
+		    		$("#blueInfoIMG").css('background-image','url('+proyect.get("cat4IMG")+')');
+		    			    	
+		    	
+		    	
 		    	$("#infoP").css('background-image','url('+proyect.get("Imagen")+')');
 
 		    			    	
 		        $("#proyects").hide();
 		        $("#blackback").hide();
-//		        $("#categorias").show();
-//		        $("#fixCategorias").show();
 		        $("#overDescripcionP").show();
 		        $("#return").show();
 		    	$("#info").show();
@@ -444,24 +445,31 @@ function loadProgram(proyect_load){
 	 			
 	 		} else {
 	 			var proyect_day = proyecto.get(now_day);  
+	 			
 	 			if(proyect_day){ 
 	 				
-	 				if(now.getHours() >= proyecto.get('HoraInicio'))
+	 				var hora = '';
+	 				var inicio_p = '';
+	 				var fin_p = '';
+	 				
+	 				if (now.getMinutes() < 10){hora = ''+now.getHours()+'0'+now.getMinutes();}
+	 				else {hora = ''+now.getHours()+''+now.getMinutes();}
+
+	 				inicio_p = ''+proyecto.get('HoraInicio')+''+proyecto.get('MinutoInicio');
+	 				fin_p = ''+proyecto.get('HoraFin')+''+proyecto.get('MinutoFin');
+	 				
+	 				
+	 				if(parseInt(hora) >= parseInt(inicio_p))
 	 				{
-	 					if(now.getMinutes() >= proyecto.get('MinutoInicio'))
+	 					if(parseInt(hora) <= parseInt(fin_p))
 	 					{
-	 						if(now.getHours() <= proyecto.get('HoraFin'))
-	 						{
-	 							if(now.getMinutes() <= proyecto.get('MinutoFin'))
-	 							{	
-	 								loadCategories(proyect_load);
-	 								tuneChannel(proyect_load);
-	 					            
-	 							} else{selected_proyect =-1;}
-	 						} else{selected_proyect =-1;}
+	 						loadCategories(proyect_load);
+	 						tuneChannel(proyect_load);
+	 						
 	 					} else{selected_proyect =-1;}
 	 				} else{selected_proyect =-1;}
 	 			} else{selected_proyect =-1;}
+	 			
 	 		}
 	 	});
 	 }
@@ -475,14 +483,21 @@ function doCheckIn(proyect_load, category){
  			
  		} else {
  				
- 				if(now.getHours() >= proyecto.get('HoraInicio'))
+ 				var hora = '';
+ 				var inicio_p = '';
+ 				var fin_p = '';
+ 				
+ 				if (now.getMinutes() < 10){hora = ''+now.getHours()+'0'+now.getMinutes()}
+ 				else {hora = ''+now.getHours()+''+now.getMinutes()}
+ 				
+ 				inicio_p = ''+proyecto.get('HoraInicio')+''+proyecto.get('MinutoInicio');
+ 				fin_p = ''+proyecto.get('HoraFin')+''+proyecto.get('MinutoFin');
+ 				
+ 				if(parseInt(hora) >= parseInt(inicio_p))
  				{
- 					if(now.getMinutes() >= proyecto.get('MinutoInicio'))
+ 					if(parseInt(hora) <= parseInt(fin_p))
  					{
- 						if(now.getHours() <= proyecto.get('HoraFin'))
- 						{
- 							if(now.getMinutes() <= proyecto.get('MinutoFin'))
- 							{	
+ 				
  								
 
  								client.getEntity(proyect_load, function(err, proyecto){
@@ -547,9 +562,6 @@ function doCheckIn(proyect_load, category){
  							  	});
  								
  								
- 					            
- 							} else{showError("El programa ha terminado.")}
- 						} else{showError("El programa ha terminado.")}
  					} else{showError("El programa ha terminado.")}
  			} else{showError("El programa ha terminado.")}
  			}
@@ -657,21 +669,27 @@ function doStart() {
                     
                     if(proyect_day){ 
                     	
-                    	if(now.getHours() >= proyect.get('HoraInicio'))
+                    	var hora = '';
+                    	var inicio_p = '';
+                    	var fin_p = '';
+                    	
+                    	if (now.getMinutes() < 10){hora = ''+now.getHours()+'0'+now.getMinutes()}
+                    	else {hora = ''+now.getHours()+''+now.getMinutes()}
+                    	
+                    	inicio_p = ''+proyect.get('HoraInicio')+''+proyect.get('MinutoInicio');
+                    	fin_p = ''+proyect.get('HoraFin')+''+proyect.get('MinutoFin');
+                    	
+                    	if(parseInt(hora) >= parseInt(inicio_p))
                     	{
-                    		if(now.getMinutes() >= proyect.get('MinutoInicio'))
+                    		if(parseInt(hora) <= parseInt(fin_p))
                     		{
-                    			if(now.getHours() <= proyect.get('HoraFin'))
-                    			{
-                    				if(now.getMinutes() <= proyect.get('MinutoFin'))
-                    				{	
-                    					comprobar = 1;
-                    					 
-                    				} else{comprobar = 0;}
-                    			} else{comprobar = 0;}
+                    			comprobar = 1;
+                    			
                     		} else{comprobar = 0;}
                     	} else{comprobar = 0;}
                     } else{comprobar = 0;}
+                    
+                    
                     
                     if(comprobar){
                         inTimeProyects = inTimeProyects +1;

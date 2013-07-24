@@ -494,6 +494,11 @@ background-color: black;
   	text-align: justify;
   }
   
+  #SceneDefault #infoDesc a{
+  	text-decoration: none;
+  	color: #83b321;
+  }
+  
   #SceneDefault #infoDescTitulo{
   color: #ffffff;
   font-family: Bitter, arial, sans-serif;
@@ -572,7 +577,7 @@ background-color: black;
   	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('AC.png');
+  	background-image: url('../../images/AC.png');
   	border-bottom: 1px solid #575956;
   	
   }
@@ -583,7 +588,7 @@ background-color: black;
   	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('DC.png');
+  	background-image: url('../../images/DC.png');
   	
   }
   
@@ -593,7 +598,7 @@ background-color: black;
   	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('BC.png');
+  	background-image: url('../../images/BC.png');
   	border-bottom: 1px solid #575956;
   	
   }
@@ -604,7 +609,7 @@ background-color: black;
   	opacity: 0.9;
   	background-size: cover;
   	background-position: center;
-  	background-image: url('CC.png');
+  	background-image: url('../../images/CC.png');
   	border-bottom: 1px solid #575956;
   	
   }
