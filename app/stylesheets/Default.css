@@ -142,6 +142,14 @@
 	font: 0.6em Bitter, arial, sans-serif;
 }
 
+#SceneDefault #ayudaC{
+	color: white;
+	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	font: 0.8em Bitter, arial, sans-serif;
+}
+
 #SceneDefault #h2prox{
 	color: white;
 	font-family: Bitter, arial, sans-serif;

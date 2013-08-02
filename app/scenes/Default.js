@@ -95,7 +95,7 @@ SceneDefault.prototype.handleKeyDown = function (keyCode) {
 			$("#categorias").show();
 			$("#fixCategorias").show();
 			$("#descripcionP").empty();
-			$("#descripcionP").append(question);
+			$("#descripcionP").append(question+'<span id="ayudaC">Utiliza los botones con letras del mando para seleccionar las opciones de análisis</span>');
 			break;
 		case sf.key.N1:
 			if (selected_proyect == -1){
